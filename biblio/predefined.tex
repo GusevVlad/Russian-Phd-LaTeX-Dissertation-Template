@@ -38,16 +38,20 @@
 
 %%% Создание команд для вывода списка литературы %%%
 \newcommand*{\insertbibliofull}{
-\bibliography{biblio/external,biblio/author}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
+\bibliography{biblio/library}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
+}
+
+\newcommand*{\insertbibliofull}{
+\bibliography{biblio/zotero}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
 }
 
 \newcommand*{\insertbiblioauthor}{
-\bibliography{biblio/author}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
+\bibliography{biblio/library}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
 }
 
-\newcommand*{\insertbiblioexternal}{
-\bibliography{biblio/external}         % Подключаем BibTeX-базы
-}
+% \newcommand*{\insertbiblioexternal}{
+% \bibliography{biblio/external}         % Подключаем BibTeX-базы
+% }
 
 
 %% Счётчик использованных ссылок на литературу, обрабатывающий с учётом неоднократных ссылок
