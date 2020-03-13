@@ -1,6 +1,3 @@
-
-\RequirePackage[l2tabu,orthodox]{nag} % Раскомментировав, можно в логе получать рекомендации относительно правильного использования пакетов и предупреждения об устаревших и нерекомендуемых пакетах
-% Формат А4, 14pt (ГОСТ Р 7.0.11-2011, 5.3.6)
 \documentclass[a4paper,14pt,oneside,openany]{memoir}
 
 \input{common/setup}            % общие настройки шаблона
@@ -50,33 +47,18 @@
 % Если все команды закомментированы, то документ будет выведен в PDF файл полностью
 
 \begin{document}
+\include{semestr_report/introduction}
 
-\input{common/renames}                 % Переопределение именований
+\chapter{Инструментарий}
 
-% \include{semestr_report/title}           % Титульный лист
-\include{semestr_report/contents}        % Оглавление
-\ifnumequal{\value{contnumfig}}{1}{}{\counterwithout{figure}{chapter}}
-\ifnumequal{\value{contnumtab}}{1}{}{\counterwithout{table}{chapter}}
-\include{semestr_report/introduction}    % Введение
-\ifnumequal{\value{contnumfig}}{1}{\counterwithout{figure}{chapter}
-}{\counterwithin{figure}{chapter}}
-\ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
-}{\counterwithin{table}{chapter}}
-\include{semestr_report/part1}           % Глава 1
-\include{semestr_report/part2}           % Глава 2
-%\include{semestr_report/part3}           % Глава 3
-\include{semestr_report/conclusion}      % Заключение
-\include{semestr_report/acronyms}        % Список сокращений и условных обозначений
-%\include{semestr_report/dictionary}      % Словарь терминов
-\include{semestr_report/references}      % Список литературы
+\section{Обоснование ограничений использования ординарных схем (на основе ординарных каскадов)}
 
-% Настройки для приложений
-\appendix
-% Оформление заголовков приложений ближе к ГОСТ:
-\setlength{\midchapskip}{20pt}
-\renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
-\renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
+\chapter{Обзор}
 
-\include{semestr_report/appendix}        % Приложения
+\chapter{Научная разработка физ-мат обеспечения}
+
+\chapter{Исследование закономерностей массопереноса}
+
+\chapter{Выводы и рекомендации}
 
 \end{document}
