@@ -53,7 +53,7 @@
 
 \input{common/renames}                 % Переопределение именований
 
-% \include{semestr_report/title}           % Титульный лист
+\include{semestr_report/title}           % Титульный лист
 \include{semestr_report/contents}        % Оглавление
 \ifnumequal{\value{contnumfig}}{1}{}{\counterwithout{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{}{\counterwithout{table}{chapter}}
@@ -63,7 +63,7 @@
 \ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
 }{\counterwithin{table}{chapter}}
 \include{semestr_report/part1}           % Глава 1
-%\include{semestr_report/part2}           % Глава 2
+\include{semestr_report/part2}           % Глава 2
 %\include{semestr_report/part3}           % Глава 3
 \include{semestr_report/conclusion}      % Заключение
 \include{semestr_report/acronyms}        % Список сокращений и условных обозначений
