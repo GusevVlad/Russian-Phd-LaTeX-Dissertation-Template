@@ -37,9 +37,9 @@
 \newcommand*{\autocite}[1]{}  % Чтобы примеры цитирования, рассчитанные на biblatex, не вызывали ошибок при компиляции в bibtex
 
 %%% Создание команд для вывода списка литературы %%%
-\newcommand*{\insertbibliofull}{
-\bibliography{biblio/library,biblio/zotero}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
-}
+% \newcommand*{\insertbibliofull}{
+% \bibliography{biblio/library,biblio/zotero}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
+% }
 
 % \newcommand*{\insertbibliofull}{
 % \bibliography{biblio/zotero}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
@@ -49,12 +49,20 @@
 % \bibliography{biblio/external}         % Подключаем BibTeX-базы
 % }
 
+% \newcommand*{\insertbibliofull}{
+% \bibliography{biblio/zot}         % Подключаем BibTeX-базы
+% }
+
+% \newcommand*{\insertbiblioexternal}{
+% \bibliography{biblio/zotero}         % Подключаем BibTeX-базы
+% }
+
 \newcommand*{\insertbibliofull}{
-\bibliography{biblio/zotero}         % Подключаем BibTeX-базы
+\bibliography{biblio/library,biblio/zotero}         % Подключаем BibTeX-базы % После запятых не должно быть лишних пробелов — он "думает", что это тоже имя пути
 }
 
 % \newcommand*{\insertbiblioexternal}{
-% \bibliography{biblio/zot}         % Подключаем BibTeX-базы
+% \bibliography{biblio/zotero}         % Подключаем BibTeX-базы
 % }
 
 
