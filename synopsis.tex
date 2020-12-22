@@ -1,7 +1,7 @@
 %&preformat-synopsis
 \RequirePackage[l2tabu,orthodox]{nag} % Раскомментировав, можно в логе получать рекомендации относительно правильного использования пакетов и предупреждения об устаревших и нерекомендуемых пакетах
 \PassOptionsToPackage{bookmarks=false}{hyperref}
-\documentclass[a5paper,10pt,twoside,openany,article]{memoir} %,draft
+\documentclass[a5paper,10pt,twoside,openany,article]{memoir}
 
 \input{common/setup}          % общие настройки шаблона
 \input{common/packages}       % Пакеты общие для диссертации и автореферата
@@ -41,6 +41,20 @@
 %\mainmatter                   % В том числе начинает нумерацию страниц арабскими цифрами с единицы
 \mainmatter*                  % Нумерация страниц не изменится, но начнётся с новой страницы
 \input{Synopsis/content}      % Содержание автореферата
+
+
+\appendix
+\section*{Список публикаций автора}
+\begin{refsection}   
+    \cite{nevinicaToplivnyyCiklLegkovodnogo2019, smirnovObogashchenieRegenerirovannogoUrana2018,
+    smirnovApplyingEnrichmentCapacities2018,
+    rodionovaAnalizTehnikoekonomicheskihHarakteristik2019,
+    smirnovMethodEnrichReprocessed2019,
+    smirnovFizikotehnicheskieProblemyObogashcheniya2020,
+    gusevMultycascadeEnrichmentSchemes2020}
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
 
 %%% Выходные сведения типографии
 \newpage\thispagestyle{empty}
