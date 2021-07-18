@@ -1,4 +1,4 @@
-
+%&preformat-disser
 \RequirePackage[l2tabu,orthodox]{nag} % Раскомментировав, можно в логе получать рекомендации относительно правильного использования пакетов и предупреждения об устаревших и нерекомендуемых пакетах
 % Формат А4, 14pt (ГОСТ Р 7.0.11-2011, 5.3.6)
 \documentclass[a4paper,14pt,oneside,openany]{memoir}
@@ -8,7 +8,9 @@
 \synopsisfalse                      % Этот документ --- не автореферат
 \input{semestr_report/dispackages}    % Пакеты для диссертации
 \input{semestr_report/userpackages}   % Пакеты для специфических пользовательских задач
+
 \input{semestr_report/setup}      % Упрощённые настройки шаблона
+
 \input{common/newnames}         % Новые переменные, для всего проекта
 
 \input{common/data}             % Основные сведения
@@ -55,7 +57,6 @@
 \include{semestr_report/contents}        % Оглавление
 \ifnumequal{\value{contnumfig}}{1}{}{\counterwithout{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{}{\counterwithout{table}{chapter}}
-
 \include{semestr_report/introduction}    % Введение
 \ifnumequal{\value{contnumfig}}{1}{\counterwithout{figure}{chapter}
 }{\counterwithin{figure}{chapter}}
@@ -63,22 +64,19 @@
 }{\counterwithin{table}{chapter}}
 \include{semestr_report/part1}           % Глава 1
 \include{semestr_report/part2}           % Глава 2
-\include{semestr_report/part3}           % Глава 3
-\include{semestr_report/conclusion}      % Заключение
-% \include{semestr_report/acronyms}        % Список сокращений и условных обозначений
+%\include{semestr_report/part3}           % Глава 3
+%\include{semestr_report/conclusion}      % Заключение
+\include{semestr_report/acronyms}        % Список сокращений и условных обозначений
 %\include{semestr_report/dictionary}      % Словарь терминов
 \include{semestr_report/references}      % Список литературы
 
-
-
-% Настройки для приложений
+%%% Настройки для приложений
 \appendix
-\include{semestr_report/appendix}
-
-
 % Оформление заголовков приложений ближе к ГОСТ:
 \setlength{\midchapskip}{20pt}
 \renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
 \renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
+
+\include{semestr_report/appendix}        % Приложения
 
 \end{document}
