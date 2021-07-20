@@ -1,0 +1,1358 @@
+[1mdiff --git a/.editorconfig b/.editorconfig[m
+[1mdeleted file mode 100644[m
+[1mindex 5d86bb2..0000000[m
+[1m--- a/.editorconfig[m
+[1m+++ /dev/null[m
+[36m@@ -1,19 +0,0 @@[m
+[31m-# EditorConfig is awesome: https://EditorConfig.org[m
+[31m-[m
+[31m-# top-most EditorConfig file[m
+[31m-root = true[m
+[31m-[m
+[31m-# All files[m
+[31m-[*][m
+[31m-charset = utf-8[m
+[31m-end_of_line = lf[m
+[31m-insert_final_newline = true[m
+[31m-trim_trailing_whitespace = true[m
+[31m-indent_style = space[m
+[31m-indent_size = 4[m
+[31m-[m
+[31m-[Makefile][m
+[31m-indent_style = tab[m
+[31m-[m
+[31m-[*.mk][m
+[31m-indent_style = tab[m
+[1mdiff --git a/.gitattributes b/.gitattributes[m
+[1mindex 112bc4e..b0adbc0 100644[m
+[1m--- a/.gitattributes[m
+[1m+++ b/.gitattributes[m
+[36m@@ -1,8 +1,8 @@[m
+[31m-images/* linguist-vendored[m
+[31m-PSCyr/pscyr0.4d.zip linguist-vendored[m
+[31m-Documents/* linguist-documentation[m
+[31m-*.md linguist-documentation[m
+[31m-.gitattributes export-ignore[m
+[31m-.gitignore export-ignore[m
+[31m-LICENSE export-ignore[m
+[32m+[m[32mimages/* linguist-vendored[m[41m[m
+[32m+[m[32mPSCyr/pscyr0.4d.zip linguist-vendored[m[41m[m
+[32m+[m[32mDocuments/* linguist-documentation[m[41m[m
+[32m+[m[32m*.md linguist-documentation[m[41m[m
+[32m+[m[32m.gitattributes export-ignore[m[41m[m
+[32m+[m[32m.gitignore export-ignore[m[41m[m
+[32m+[m[32mLICENSE export-ignore[m[41m[m
+ CONTRIBUTING.md export-ignore[m
+\ No newline at end of file[m
+[1mdiff --git a/.github/ISSUE_TEMPLATE/bug_report.md b/.github/ISSUE_TEMPLATE/bug_report.md[m
+[1mdeleted file mode 100644[m
+[1mindex 0836683..0000000[m
+[1m--- a/.github/ISSUE_TEMPLATE/bug_report.md[m
+[1m+++ /dev/null[m
+[36m@@ -1,43 +0,0 @@[m
+[31m----[m
+[31m-name: Bug report[m
+[31m-about: Сообщение об ошибке в шаблоне[m
+[31m-title: ''[m
+[31m-labels: ''[m
+[31m-assignees: ''[m
+[31m-[m
+[31m----[m
+[31m-[m
+[31m-**Описание ошибки**[m
+[31m-[m
+[31m-Чёткое и краткое описание ошибки.[m
+[31m-[m
+[31m-**Воспроизведение**[m
+[31m-[m
+[31m-Описание шагов, приводящих к ошибке:[m
+[31m-[m
+[31m-1. Открыть файл '....'[m
+[31m-2. Заменить '....' на '....'[m
+[31m-3. Выполнить команду '....'[m
+[31m-4. Увидеть ошибку[m
+[31m-[m
+[31m-**Ожидаемое поведение**[m
+[31m-[m
+[31m-Чёткое и краткое описание того, что должно было произойти.[m
+[31m-[m
+[31m-**Cкриншоты**[m
+[31m-[m
+[31m-Изображения, иллюстрирующие ошибку.[m
+[31m-[m
+[31m-**Логи**[m
+[31m-[m
+[31m-Сообщения ошибок при компиляции.[m
+[31m-[m
+[31m-**Используемые версии программ**[m
+[31m-[m
+[31m- - Операционная система, версия, дистрибутив[m
+[31m- - Дистрибутив TeX (TeXLive / MikTeX) и его версия[m
+[31m- - Версии пакетов TeX, относящихся к описываемой проблеме (при удачной компиляции список выводится в конце лога сборки после строки `*File List*`)[m
+[31m-[m
+[31m-**Дополнительные материалы**[m
+[31m-[m
+[31m-Дополнительные материалы, описывающие ошибку.[m
+[1mdiff --git a/.github/ISSUE_TEMPLATE/feature_request.md b/.github/ISSUE_TEMPLATE/feature_request.md[m
+[1mdeleted file mode 100644[m
+[1mindex 177b0b5..0000000[m
+[1m--- a/.github/ISSUE_TEMPLATE/feature_request.md[m
+[1m+++ /dev/null[m
+[36m@@ -1,20 +0,0 @@[m
+[31m----[m
+[31m-name: Feature request[m
+[31m-about: Предложить идею для шаблона[m
+[31m-title: ''[m
+[31m-labels: ''[m
+[31m-assignees: ''[m
+[31m-[m
+[31m----[m
+[31m-[m
+[31m-**Ваш запрос функции связан с проблемой? Пожалуйста, опишите**[m
+[31m-[m
+[31m-Четкое и краткое описание проблемы. Например, у нашей комиссии есть дополнительное требование к оформлению '....'[m
+[31m-[m
+[31m-**Опишите решение, как Вы его себе представляете**[m
+[31m-[m
+[31m-Четкое и краткое описание работы новой функции.[m
+[31m-[m
+[31m-**Дополнительные материалы**[m
+[31m-[m
+[31m-Дополнительные материалы, скриншоты и т.п.[m
+[1mdiff --git a/.github/PULL_REQUEST_TEMPLATE.md b/.github/PULL_REQUEST_TEMPLATE.md[m
+[1mdeleted file mode 100644[m
+[1mindex e888efb..0000000[m
+[1m--- a/.github/PULL_REQUEST_TEMPLATE.md[m
+[1m+++ /dev/null[m
+[36m@@ -1,48 +0,0 @@[m
+[31m-<!-- Подробнее об оформлении PR можно прочитать в документе https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template/blob/master/CONTRIBUTING.md -->[m
+[31m-[m
+[31m-## PR checklist[m
+[31m-[m
+[31m-Пожалуйста, убедитесь, что Ваш PR удовлетворяет требованиям:[m
+[31m-[m
+[31m-- [ ] Изменения были протестированы (`make examples`)[m
+[31m-- [ ] Изменения отражены в документации к шаблону[m
+[31m-- [ ] Код соответствует правилам индентации шаблона (`make indent`)[m
+[31m-[m
+[31m-[m
+[31m-## Тип PR[m
+[31m-[m
+[31m-Отметьте графы, которые относятся к данному PR:[m
+[31m-[m
+[31m-- [ ] Bugfix[m
+[31m-- [ ] Feature[m
+[31m-- [ ] Форматирование стиля кода[m
+[31m-- [ ] Изменение текста шаблона[m
+[31m-- [ ] Изменение документации[m
+[31m-- [ ] Другое:[m
+[31m-[m
+[31m-[m
+[31m-## Описание PR[m
+[31m-<!-- Описание изменений. -->[m
+[31m-[m
+[31m--[m
+[31m--[m
+[31m--[m
+[31m-[m
+[31m-## Смежные обсуждения[m
+[31m-<!-- Ссылки на PR и issue, к которым относится данный PR. -->[m
+[31m-[m
+[31m-Данный PR закрывает issue:[m
+[31m-[m
+[31m-## Тестирование шаблона[m
+[31m-<!-- Эта часть в будущем должна быть автоматизирована -->[m
+[31m-[m
+[31m-Тестирование производилось в среде[m
+[31m-[m
+[31m-- [ ] Windows[m
+[31m-- [ ] Windows Cygwin[m
+[31m-- [ ] GNU/Linux (на основе Debian)[m
+[31m-- [ ] GNU/Linux (на основе RedHat)[m
+[31m-- [ ] Arch Linux[m
+[31m-- [ ] Docker (ссылка на контейнер):[m
+[31m-[m
+[31m-## Другая информация[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex 27fc076..876b9f2 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -1,278 +1,278 @@[m
+[31m-## Core latex/pdflatex auxiliary files:[m
+[31m-*.aux[m
+[31m-*.lof[m
+[31m-*.log[m
+[31m-*.lot[m
+[31m-*.fls[m
+[31m-*.out[m
+[31m-*.toc[m
+[31m-*.fot[m
+[31m-*.cb[m
+[31m-*.cb2[m
+[31m-.*.lb[m
+[31m-[m
+[31m-## Intermediate documents:[m
+[31m-*.dvi[m
+[31m-*.xdv[m
+[31m-*-converted-to.*[m
+[31m-# these rules might exclude image files for figures etc.[m
+[31m-/*.ps[m
+[31m-/*.eps[m
+[31m-/*.pdf[m
+[31m-[m
+[31m-## Bibliography auxiliary files (bibtex/biblatex/biber):[m
+[31m-*.bbl[m
+[31m-*.bcf[m
+[31m-*.blg[m
+[31m-*-blx.aux[m
+[31m-*-blx.bib[m
+[31m-*.run.xml[m
+[31m-[m
+[31m-## Build tool auxiliary files:[m
+[31m-*.fdb_latexmk[m
+[31m-*.synctex[m
+[31m-*.synctex(busy)[m
+[31m-*.synctex.gz[m
+[31m-*.synctex.gz(busy)[m
+[31m-*.pdfsync[m
+[31m-[m
+[31m-## Build tool directories for auxiliary files[m
+[31m-# latexrun[m
+[31m-latex.out/[m
+[31m-[m
+[31m-## Auxiliary and intermediate files from other packages:[m
+[31m-# algorithms[m
+[31m-*.alg[m
+[31m-*.loa[m
+[31m-[m
+[31m-# achemso[m
+[31m-acs-*.bib[m
+[31m-[m
+[31m-# amsthm[m
+[31m-*.thm[m
+[31m-[m
+[31m-# beamer[m
+[31m-*.nav[m
+[31m-*.pre[m
+[31m-*.snm[m
+[31m-*.vrb[m
+[31m-[m
+[31m-# changes[m
+[31m-*.soc[m
+[31m-[m
+[31m-# comment[m
+[31m-*.cut[m
+[31m-[m
+[31m-# cprotect[m
+[31m-*.cpt[m
+[31m-[m
+[31m-# elsarticle (documentclass of Elsevier journals)[m
+[31m-*.spl[m
+[31m-[m
+[31m-# endnotes[m
+[31m-*.ent[m
+[31m-[m
+[31m-# fixme[m
+[31m-*.lox[m
+[31m-[m
+[31m-# feynmf/feynmp[m
+[31m-*.mf[m
+[31m-*.mp[m
+[31m-*.t[1-9][m
+[31m-*.t[1-9][0-9][m
+[31m-*.tfm[m
+[31m-[m
+[31m-#(r)(e)ledmac/(r)(e)ledpar[m
+[31m-*.end[m
+[31m-*.?end[m
+[31m-*.[1-9][m
+[31m-*.[1-9][0-9][m
+[31m-*.[1-9][0-9][0-9][m
+[31m-*.[1-9]R[m
+[31m-*.[1-9][0-9]R[m
+[31m-*.[1-9][0-9][0-9]R[m
+[31m-*.eledsec[1-9][m
+[31m-*.eledsec[1-9]R[m
+[31m-*.eledsec[1-9][0-9][m
+[31m-*.eledsec[1-9][0-9]R[m
+[31m-*.eledsec[1-9][0-9][0-9][m
+[31m-*.eledsec[1-9][0-9][0-9]R[m
+[31m-[m
+[31m-# glossaries[m
+[31m-*.acn[m
+[31m-*.acr[m
+[31m-*.glg[m
+[31m-*.glo[m
+[31m-*.gls[m
+[31m-*.glsdefs[m
+[31m-[m
+[31m-# gnuplottex[m
+[31m-*-gnuplottex-*[m
+[31m-[m
+[31m-# gregoriotex[m
+[31m-*.gaux[m
+[31m-*.gtex[m
+[31m-[m
+[31m-# htlatex[m
+[31m-*.4ct[m
+[31m-*.4tc[m
+[31m-*.idv[m
+[31m-*.lg[m
+[31m-*.trc[m
+[31m-*.xref[m
+[31m-[m
+[31m-# hyperref[m
+[31m-*.brf[m
+[31m-[m
+[31m-# knitr[m
+[31m-*-concordance.tex[m
+[31m-# Comment the next line if you want to keep your tikz graphics files[m
+[31m-*.tikz[m
+[31m-*-tikzDictionary[m
+[31m-images/cache/**[m
+[31m-[m
+[31m-# listings[m
+[31m-*.lol[m
+[31m-[m
+[31m-# luatexja-ruby[m
+[31m-*.ltjruby[m
+[31m-[m
+[31m-# makeidx[m
+[31m-*.idx[m
+[31m-*.ilg[m
+[31m-*.ind[m
+[31m-*.ist[m
+[31m-[m
+[31m-# minitoc[m
+[31m-*.maf[m
+[31m-*.mlf[m
+[31m-*.mlt[m
+[31m-*.mtc[0-9]*[m
+[31m-*.slf[0-9]*[m
+[31m-*.slt[0-9]*[m
+[31m-*.stc[0-9]*[m
+[31m-[m
+[31m-# minted[m
+[31m-_minted*[m
+[31m-*.pyg[m
+[31m-[m
+[31m-# morewrites[m
+[31m-*.mw[m
+[31m-[m
+[31m-# mylatexformat[m
+[31m-*.fmt[m
+[31m-[m
+[31m-# nomencl[m
+[31m-*.nlg[m
+[31m-*.nlo[m
+[31m-*.nls[m
+[31m-[m
+[31m-# pax[m
+[31m-*.pax[m
+[31m-[m
+[31m-# pdfpcnotes[m
+[31m-*.pdfpc[m
+[31m-[m
+[31m-# sagetex[m
+[31m-*.sagetex.sage[m
+[31m-*.sagetex.py[m
+[31m-*.sagetex.scmd[m
+[31m-[m
+[31m-# scrwfile[m
+[31m-*.wrt[m
+[31m-[m
+[31m-# sympy[m
+[31m-*.sout[m
+[31m-*.sympy[m
+[31m-sympy-plots-for-*.tex/[m
+[31m-[m
+[31m-# pdfcomment[m
+[31m-*.upa[m
+[31m-*.upb[m
+[31m-[m
+[31m-# pythontex[m
+[31m-*.pytxcode[m
+[31m-pythontex-files-*/[m
+[31m-[m
+[31m-# tcolorbox[m
+[31m-*.listing[m
+[31m-[m
+[31m-# thmtools[m
+[31m-*.loe[m
+[31m-[m
+[31m-# TikZ & PGF[m
+[31m-*.dpth[m
+[31m-*.md5[m
+[31m-*.auxlock[m
+[31m-[m
+[31m-# todonotes[m
+[31m-*.tdo[m
+[31m-[m
+[31m-# vhistory[m
+[31m-*.hst[m
+[31m-*.ver[m
+[31m-[m
+[31m-# easy-todo[m
+[31m-*.lod[m
+[31m-[m
+[31m-# xcolor[m
+[31m-*.xcp[m
+[31m-[m
+[31m-# xmpincl[m
+[31m-*.xmpi[m
+[31m-[m
+[31m-# xindy[m
+[31m-*.xdy[m
+[31m-[m
+[31m-# xypic precompiled matrices[m
+[31m-*.xyc[m
+[31m-[m
+[31m-# endfloat[m
+[31m-*.ttt[m
+[31m-*.fff[m
+[31m-[m
+[31m-# Latexian[m
+[31m-TSWLatexianTemp*[m
+[31m-[m
+[31m-## Editors:[m
+[31m-# WinEdt[m
+[31m-*.bak[m
+[31m-*.sav[m
+[31m-[m
+[31m-# Texpad[m
+[31m-.texpadtmp[m
+[31m-[m
+[31m-# LyX[m
+[31m-*.lyx~[m
+[31m-[m
+[31m-# Kile[m
+[31m-*.backup[m
+[31m-[m
+[31m-# KBibTeX[m
+[31m-*~[0-9]*[m
+[31m-[m
+[31m-# Vim[m
+[31m-.*.swp[m
+[31m-.*.swo[m
+[31m-[m
+[31m-# auto folder when using emacs and auctex[m
+[31m-./auto/*[m
+[31m-*.el[m
+[31m-[m
+[31m-# expex forward references with \gathertags[m
+[31m-*-tags.tex[m
+[31m-[m
+[31m-# standalone packages[m
+[31m-*.sta[m
+[31m-[m
+[31m-# latexindent backups[m
+[31m-*.bak[0-9][m
+[31m-[m
+[31m-# OS generated files[m
+[31m-.DS_Store[m
+[31m-.DS_Store?[m
+[31m-._*[m
+[31m-.Spotlight-V100[m
+[31m-.Trashes[m
+[31m-ehthumbs.db[m
+[31m-Thumbs.db[m
+[32m+[m[32m## Core latex/pdflatex auxiliary files:[m[41m[m
+[32m+[m[32m*.aux[m[41m[m
+[32m+[m[32m*.lof[m[41m[m
+[32m+[m[32m*.log[m[41m[m
+[32m+[m[32m*.lot[m[41m[m
+[32m+[m[32m*.fls[m[41m[m
+[32m+[m[32m*.out[m[41m[m
+[32m+[m[32m*.toc[m[41m[m
+[32m+[m[32m*.fot[m[41m[m
+[32m+[m[32m*.cb[m[41m[m
+[32m+[m[32m*.cb2[m[41m[m
+[32m+[m[32m.*.lb[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Intermediate documents:[m[41m[m
+[32m+[m[32m*.dvi[m[41m[m
+[32m+[m[32m*.xdv[m[41m[m
+[32m+[m[32m*-converted-to.*[m[41m[m
+[32m+[m[32m# these rules might exclude image files for figures etc.[m[41m[m
+[32m+[m[32m/*.ps[m[41m[m
+[32m+[m[32m/*.eps[m[41m[m
+[32m+[m[32m/*.pdf[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Bibliography auxiliary files (bibtex/biblatex/biber):[m[41m[m
+[32m+[m[32m*.bbl[m[41m[m
+[32m+[m[32m*.bcf[m[41m[m
+[32m+[m[32m*.blg[m[41m[m
+[32m+[m[32m*-blx.aux[m[41m[m
+[32m+[m[32m*-blx.bib[m[41m[m
+[32m+[m[32m*.run.xml[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Build tool auxiliary files:[m[41m[m
+[32m+[m[32m*.fdb_latexmk[m[41m[m
+[32m+[m[32m*.synctex[m[41m[m
+[32m+[m[32m*.synctex(busy)[m[41m[m
+[32m+[m[32m*.synctex.gz[m[41m[m
+[32m+[m[32m*.synctex.gz(busy)[m[41m[m
+[32m+[m[32m*.pdfsync[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Build tool directories for auxiliary files[m[41m[m
+[32m+[m[32m# latexrun[m[41m[m
+[32m+[m[32mlatex.out/[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Auxiliary and intermediate files from other packages:[m[41m[m
+[32m+[m[32m# algorithms[m[41m[m
+[32m+[m[32m*.alg[m[41m[m
+[32m+[m[32m*.loa[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# achemso[m[41m[m
+[32m+[m[32macs-*.bib[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# amsthm[m[41m[m
+[32m+[m[32m*.thm[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# beamer[m[41m[m
+[32m+[m[32m*.nav[m[41m[m
+[32m+[m[32m*.pre[m[41m[m
+[32m+[m[32m*.snm[m[41m[m
+[32m+[m[32m*.vrb[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# changes[m[41m[m
+[32m+[m[32m*.soc[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# comment[m[41m[m
+[32m+[m[32m*.cut[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# cprotect[m[41m[m
+[32m+[m[32m*.cpt[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# elsarticle (documentclass of Elsevier journals)[m[41m[m
+[32m+[m[32m*.spl[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# endnotes[m[41m[m
+[32m+[m[32m*.ent[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# fixme[m[41m[m
+[32m+[m[32m*.lox[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# feynmf/feynmp[m[41m[m
+[32m+[m[32m*.mf[m[41m[m
+[32m+[m[32m*.mp[m[41m[m
+[32m+[m[32m*.t[1-9][m[41m[m
+[32m+[m[32m*.t[1-9][0-9][m[41m[m
+[32m+[m[32m*.tfm[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m#(r)(e)ledmac/(r)(e)ledpar[m[41m[m
+[32m+[m[32m*.end[m[41m[m
+[32m+[m[32m*.?end[m[41m[m
+[32m+[m[32m*.[1-9][m[41m[m
+[32m+[m[32m*.[1-9][0-9][m[41m[m
+[32m+[m[32m*.[1-9][0-9][0-9][m[41m[m
+[32m+[m[32m*.[1-9]R[m[41m[m
+[32m+[m[32m*.[1-9][0-9]R[m[41m[m
+[32m+[m[32m*.[1-9][0-9][0-9]R[m[41m[m
+[32m+[m[32m*.eledsec[1-9][m[41m[m
+[32m+[m[32m*.eledsec[1-9]R[m[41m[m
+[32m+[m[32m*.eledsec[1-9][0-9][m[41m[m
+[32m+[m[32m*.eledsec[1-9][0-9]R[m[41m[m
+[32m+[m[32m*.eledsec[1-9][0-9][0-9][m[41m[m
+[32m+[m[32m*.eledsec[1-9][0-9][0-9]R[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# glossaries[m[41m[m
+[32m+[m[32m*.acn[m[41m[m
+[32m+[m[32m*.acr[m[41m[m
+[32m+[m[32m*.glg[m[41m[m
+[32m+[m[32m*.glo[m[41m[m
+[32m+[m[32m*.gls[m[41m[m
+[32m+[m[32m*.glsdefs[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# gnuplottex[m[41m[m
+[32m+[m[32m*-gnuplottex-*[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# gregoriotex[m[41m[m
+[32m+[m[32m*.gaux[m[41m[m
+[32m+[m[32m*.gtex[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# htlatex[m[41m[m
+[32m+[m[32m*.4ct[m[41m[m
+[32m+[m[32m*.4tc[m[41m[m
+[32m+[m[32m*.idv[m[41m[m
+[32m+[m[32m*.lg[m[41m[m
+[32m+[m[32m*.trc[m[41m[m
+[32m+[m[32m*.xref[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# hyperref[m[41m[m
+[32m+[m[32m*.brf[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# knitr[m[41m[m
+[32m+[m[32m*-concordance.tex[m[41m[m
+[32m+[m[32m# Comment the next line if you want to keep your tikz graphics files[m[41m[m
+[32m+[m[32m*.tikz[m[41m[m
+[32m+[m[32m*-tikzDictionary[m[41m[m
+[32m+[m[32mimages/cache/**[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# listings[m[41m[m
+[32m+[m[32m*.lol[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# luatexja-ruby[m[41m[m
+[32m+[m[32m*.ltjruby[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# makeidx[m[41m[m
+[32m+[m[32m*.idx[m[41m[m
+[32m+[m[32m*.ilg[m[41m[m
+[32m+[m[32m*.ind[m[41m[m
+[32m+[m[32m*.ist[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# minitoc[m[41m[m
+[32m+[m[32m*.maf[m[41m[m
+[32m+[m[32m*.mlf[m[41m[m
+[32m+[m[32m*.mlt[m[41m[m
+[32m+[m[32m*.mtc[0-9]*[m[41m[m
+[32m+[m[32m*.slf[0-9]*[m[41m[m
+[32m+[m[32m*.slt[0-9]*[m[41m[m
+[32m+[m[32m*.stc[0-9]*[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# minted[m[41m[m
+[32m+[m[32m_minted*[m[41m[m
+[32m+[m[32m*.pyg[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# morewrites[m[41m[m
+[32m+[m[32m*.mw[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# mylatexformat[m[41m[m
+[32m+[m[32m*.fmt[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# nomencl[m[41m[m
+[32m+[m[32m*.nlg[m[41m[m
+[32m+[m[32m*.nlo[m[41m[m
+[32m+[m[32m*.nls[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# pax[m[41m[m
+[32m+[m[32m*.pax[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# pdfpcnotes[m[41m[m
+[32m+[m[32m*.pdfpc[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# sagetex[m[41m[m
+[32m+[m[32m*.sagetex.sage[m[41m[m
+[32m+[m[32m*.sagetex.py[m[41m[m
+[32m+[m[32m*.sagetex.scmd[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# scrwfile[m[41m[m
+[32m+[m[32m*.wrt[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# sympy[m[41m[m
+[32m+[m[32m*.sout[m[41m[m
+[32m+[m[32m*.sympy[m[41m[m
+[32m+[m[32msympy-plots-for-*.tex/[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# pdfcomment[m[41m[m
+[32m+[m[32m*.upa[m[41m[m
+[32m+[m[32m*.upb[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# pythontex[m[41m[m
+[32m+[m[32m*.pytxcode[m[41m[m
+[32m+[m[32mpythontex-files-*/[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# tcolorbox[m[41m[m
+[32m+[m[32m*.listing[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# thmtools[m[41m[m
+[32m+[m[32m*.loe[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# TikZ & PGF[m[41m[m
+[32m+[m[32m*.dpth[m[41m[m
+[32m+[m[32m*.md5[m[41m[m
+[32m+[m[32m*.auxlock[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# todonotes[m[41m[m
+[32m+[m[32m*.tdo[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# vhistory[m[41m[m
+[32m+[m[32m*.hst[m[41m[m
+[32m+[m[32m*.ver[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# easy-todo[m[41m[m
+[32m+[m[32m*.lod[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# xcolor[m[41m[m
+[32m+[m[32m*.xcp[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# xmpincl[m[41m[m
+[32m+[m[32m*.xmpi[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# xindy[m[41m[m
+[32m+[m[32m*.xdy[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# xypic precompiled matrices[m[41m[m
+[32m+[m[32m*.xyc[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# endfloat[m[41m[m
+[32m+[m[32m*.ttt[m[41m[m
+[32m+[m[32m*.fff[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Latexian[m[41m[m
+[32m+[m[32mTSWLatexianTemp*[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Editors:[m[41m[m
+[32m+[m[32m# WinEdt[m[41m[m
+[32m+[m[32m*.bak[m[41m[m
+[32m+[m[32m*.sav[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Texpad[m[41m[m
+[32m+[m[32m.texpadtmp[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# LyX[m[41m[m
+[32m+[m[32m*.lyx~[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Kile[m[41m[m
+[32m+[m[32m*.backup[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# KBibTeX[m[41m[m
+[32m+[m[32m*~[0-9]*[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Vim[m[41m[m
+[32m+[m[32m.*.swp[m[41m[m
+[32m+[m[32m.*.swo[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# auto folder when using emacs and auctex[m[41m[m
+[32m+[m[32m./auto/*[m[41m[m
+[32m+[m[32m*.el[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# expex forward references with \gathertags[m[41m[m
+[32m+[m[32m*-tags.tex[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# standalone packages[m[41m[m
+[32m+[m[32m*.sta[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# latexindent backups[m[41m[m
+[32m+[m[32m*.bak[0-9][m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# OS generated files[m[41m[m
+[32m+[m[32m.DS_Store[m[41m[m
+[32m+[m[32m.DS_Store?[m[41m[m
+[32m+[m[32m._*[m[41m[m
+[32m+[m[32m.Spotlight-V100[m[41m[m
+[32m+[m[32m.Trashes[m[41m[m
+[32m+[m[32mehthumbs.db[m[41m[m
+[32m+[m[32mThumbs.db[m[41m[m
+[1mdiff --git a/BibTeX-Styles/ugost2003.bst b/BibTeX-Styles/ugost2003.bst[m
+[1mindex 59ddb4e..f79d24f 100644[m
+[1m--- a/BibTeX-Styles/ugost2003.bst[m
+[1m+++ b/BibTeX-Styles/ugost2003.bst[m
+[36m@@ -1,1930 +1,1930 @@[m
+[31m-%%[m
+[31m-%% This is file `ugost2003.bst',[m
+[31m-%% generated with the docstrip utility.[m
+[31m-%%[m
+[31m-%% The original source files were:[m
+[31m-%%[m
+[31m-%% gost.dtx  (with options: `bst,utf8,strict,eprint')[m
+[31m-%%[m
+[31m-%% This file may be distributed and/or modified under the[m
+[31m-%% conditions of the LaTeX Project Public License, either version 1.3[m
+[31m-%% of this license or (at your option) any later version.[m
+[31m-%% The latest version of this license is in[m
+[31m-%%   http://www.latex-project.org/lppl.txt[m
+[31m-%% and version 1.3 or later is part of all distributions of LaTeX[m
+[31m-%% version 2005/12/01 or later.[m
+[31m-%%[m
+[31m-%% This file has the LPPL maintenance status "maintained".[m
+[31m-%% Maintained by Igor A. Kotelnikov.[m
+[31m-%% Current version: 2012.02.02[m
+[31m-%%[m
+[31m-%% Please, send bug report via e-mail:[m
+[31m-%%   kia999 at mail dot ru <Igor Kotelnikov>[m
+[31m-%% or[m
+[31m-%%   polyama at yahoo dot com <Maksym Polyakov>[m
+[31m-%%[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-%%[m
+[31m-%% This bibstyle attempts to format bibliography according to[m
+[31m-%% GOST 7.80-2000 for bibliographic records.[m
+[31m-[m
+[31m-ENTRY[m
+[31m-  { address[m
+[31m-    annote[m
+[31m-    author[m
+[31m-    booktitle[m
+[31m-    bookauthor[m
+[31m-    chapter[m
+[31m-    edition[m
+[31m-    editor[m
+[31m-    compiler[m
+[31m-    howpublished[m
+[31m-    institution[m
+[31m-    journal[m
+[31m-    key[m
+[31m-    month[m
+[31m-    note[m
+[31m-    number[m
+[31m-    organization[m
+[31m-    pages[m
+[31m-    publisher[m
+[31m-    school[m
+[31m-    series[m
+[31m-    title[m
+[31m-    medium % new in v.2.[m
+[31m-    type[m
+[31m-    volume[m
+[31m-    year[m
+[31m-    language[m
+[31m-    booklanguage[m
+[31m-    numpages[m
+[31m-    url[m
+[31m-    urldate[m
+[31m-    isbn[m
+[31m-    doi[m
+[31m-    eprinttype   % = archivePrefix[m
+[31m-    eprintclass  % = primaryClass[m
+[31m-    eprint[m
+[31m-  }[m
+[31m-  {}[m
+[31m-  { label }[m
+[31m-[m
+[31m-INTEGERS { output.state before.all mid.sentence after.sentence after.block[m
+[31m-after.dblslash after.slash after.column after.semicolumn }[m
+[31m-[m
+[31m-FUNCTION {init.state.consts}[m
+[31m-{ #0 'before.all :=[m
+[31m-  #1 'mid.sentence :=[m
+[31m-  #2 'after.sentence :=[m
+[31m-  #3 'after.block :=[m
+[31m-  #4 'after.dblslash :=[m
+[31m-  #5 'after.slash :=[m
+[31m-  #6 'after.column :=[m
+[31m-  #7 'after.semicolumn :=[m
+[31m-}[m
+[31m-[m
+[31m-STRINGS { s t }[m
+[31m-[m
+[31m-STRINGS { curlanguage }[m
+[31m-[m
+[31m-FUNCTION {change.language}[m
+[31m-{ booklanguage empty$[m
+[31m-    { "" }[m
+[31m-    { booklanguage  'curlanguage :=[m
+[31m-      "\selectlanguageifdefined{"[m
+[31m-      curlanguage *[m
+[31m-      "}" *[m
+[31m-    }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {output.nonnull}[m
+[31m-{[m
+[31m-  swap$[m
+[31m-  output.state mid.sentence =[m
+[31m-    { ", " * write$ }[m
+[31m-    { output.state after.block =[m
+[31m-        { add.period$ write$[m
+[31m-          " " quote$ "--- " * *  write$[m
+[31m-          newline$[m
+[31m-          "\newblock " write$[m
+[31m-        }[m
+[31m-        { output.state before.all =[m
+[31m-            'write$[m
+[31m-            { output.state after.dblslash =[m
+[31m-                { "~//" * change.language * " " * write$ }[m
+[31m-                { output.state after.slash =[m
+[31m-                    { "~/ " * write$ }[m
+[31m-                    { output.state after.column =[m
+[31m-                        { "~: " * write$ }[m
+[31m-                        { output.state after.semicolumn =[m
+[31m-                            { "~; " * write$ }[m
+[31m-                        { add.period$ " " * write$ }[m
+[31m-                       if$[m
+[31m-                        }[m
+[31m-                      if$[m
+[31m-                    }[m
+[31m-                  if$[m
+[31m-                }[m
+[31m-              if$[m
+[31m-            }[m
+[31m-          if$[m
+[31m-        }[m
+[31m-      if$[m
+[31m-      mid.sentence 'output.state :=[m
+[31m-    }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {output}[m
+[31m-{ duplicate$ empty$[m
+[31m-    'pop$[m
+[31m-    'output.nonnull[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {output.check}[m
+[31m-{ 't :=[m
+[31m-  duplicate$ empty$[m
+[31m-    { pop$ "empty " t * " in " * cite$ * warning$ }[m
+[31m-    'output.nonnull[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {fin.entry}[m
+[31m-{ add.period$[m
+[31m-  write$[m
+[31m-  newline$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.block}[m
+[31m-{ output.state before.all =[m
+[31m-    'skip$[m
+[31m-    { after.block 'output.state := }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.dblslash}[m
+[31m-{ output.state before.all =[m
+[31m-    'skip$[m
+[31m-    { after.dblslash 'output.state := }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.slash}[m
+[31m-{ output.state before.all =[m
+[31m-    'skip$[m
+[31m-    { after.slash 'output.state := }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.column}[m
+[31m-{ output.state before.all =[m
+[31m-    'skip$[m
+[31m-    { after.column 'output.state := }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.semicolumn}[m
+[31m-{ output.state before.all =[m
+[31m-    'skip$[m
+[31m-    { after.semicolumn 'output.state := }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.sentence}[m
+[31m-{ output.state after.block =[m
+[31m-    'skip$[m
+[31m-    { output.state before.all =[m
+[31m-        'skip$[m
+[31m-        { after.sentence 'output.state := }[m
+[31m-      if$[m
+[31m-    }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {add.blank}[m
+[31m-{ " " * before.all 'output.state :=[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {not}[m
+[31m-{   { #0 }[m
+[31m-    { #1 }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {and}[m
+[31m-{   'skip$[m
+[31m-    { pop$ #0 }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {or}[m
+[31m-{   { pop$ #1 }[m
+[31m-    'skip$[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-FUNCTION {non.stop}[m
+[31m-{ duplicate$[m
+[31m-   "}" * add.period$[m
+[31m-   #-1 #1 substring$ "." =[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.block.checka}[m
+[31m-{ empty$[m
+[31m-    'skip$[m
+[31m-    'new.block[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.block.checkb}[m
+[31m-{ empty$[m
+[31m-  swap$ empty$[m
+[31m-  and[m
+[31m-    'skip$[m
+[31m-    'new.block[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.sentence.checka}[m
+[31m-{ empty$[m
+[31m-    'skip$[m
+[31m-    'new.sentence[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.sentence.checkb}[m
+[31m-{ empty$[m
+[31m-  swap$ empty$[m
+[31m-  and[m
+[31m-    'skip$[m
+[31m-    'new.sentence[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {new.dblslash.checka}[m
+[31m-{ empty$[m
+[31m-    'skip$[m
+[31m-    'new.dblslash[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {field.or.null}[m
+[31m-{ duplicate$ empty$[m
+[31m-    { pop$ "" }[m
+[31m-    'skip$[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {emphasize}[m
+[31m-{ duplicate$ empty$[m
+[31m-    { pop$ "" }[m
+[31m-    { "\BibEmph{" swap$ * "}" * }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {enclose.square.brackets}[m
+[31m-{ duplicate$ empty$[m
+[31m-    { pop$ "" }[m
+[31m-    { "[" swap$ * "]" * }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {bracify}[m
+[31m-{ duplicate$ empty$[m
+[31m-    { pop$ "{}" }[m
+[31m-    { "{" swap$ * "}" * }[m
+[31m-  if$[m
+[31m-}[m
+[31m-FUNCTION {bracketise}[m
+[31m-{ duplicate$ empty$[m
+[31m-    { pop$ "[]" }[m
+[31m-    { "[" swap$ * "]" * }[m
+[31m-  if$[m
+[31m-}[m
+[31m-FUNCTION {parenthesify}[m
+[31m-{ duplicate$ empty$[m
+[31m-    { pop$ "()" }[m
+[31m-    { "(" swap$ * ")" * }[m
+[31m-  if$[m
+[31m-}[m
+[31m-[m
+[31m-FUNCTION {space.word}[m
+[31m-{ " " swap$ * " " * }[m
+[31m-[m
+[31m-FUNCTION {bbl.edby}    %  { "\bbledby{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"Ed.\ by"}[m
+[31m-   { curlanguage "ukrainian" =[m
+[31m-      {"Під ред."}[m
+[31m-      { curlanguage "russian" =[m
+[31m-         {"Под ред."}[m
+[31m-         { curlanguage "german" =[m
+[31m-            { "ed." }[m
+[31m-            {"language is not defined: " language "edby" * * warning$ "Ed.\ by"}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.cmplr}[m
+[31m-{ curlanguage "english" =[m
+[31m-   { "Compiler"}[m
+[31m-   { curlanguage "german" =[m
+[31m-      { "Hrsg." }[m
+[31m-      { curlanguage "ukrainian" =[m
+[31m-         {"{Укл.}"}[m
+[31m-         { curlanguage "russian" =[m
+[31m-            {"{Сост.}"}[m
+[31m-            {"language is not defined: " language  "cmplr" * * warning$ "Compiler"}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.edition} %  { "\bbledition{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"edition"}[m
+[31m-   { curlanguage "ukrainian" =[m
+[31m-      {"{вид.}"}[m
+[31m-      { curlanguage "russian" =[m
+[31m-         {"{изд.}"}[m
+[31m-         { curlanguage "german" =[m
+[31m-            {" {aus.}" } %%%% { "Aufl." } ??[m
+[31m-            { curlanguage "italian" =[m
+[31m-               {"edizione"}[m
+[31m-               { curlanguage "french" =[m
+[31m-                  {"\'{e}dition"}[m
+[31m-                  {"language is not defined: " language  "edition" * * warning$ "edition"}[m
+[31m-               if$}[m
+[31m-            if$}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.vvolume} %  { "\bblVolume{}" }[m
+[31m-{ curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or[m
+[31m-   {"Volume"}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      { "Том" }[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"{Band}"} %%%% { "Volumen" }[m
+[31m-         {"language is not defined: " language  "vvolume" * * warning$ "Volume"}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.vvol}    %  { "\bblVol{}" }[m
+[31m-{ curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or[m
+[31m-   {"Vol."}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      {"Т."}[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"{Bd.}"} %%%% { "Vol." }[m
+[31m-         {"language is not defined: " language  "vvol" * * warning$ "Vol."}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.iissue}  %  { "\bblIssue{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"Issue"}[m
+[31m-   { curlanguage "ukrainian" =[m
+[31m-      {"Випуск"}[m
+[31m-      { curlanguage "russian" =[m
+[31m-         {"Выпуск"}[m
+[31m-         { curlanguage "german" =[m
+[31m-            {"{Heft}"} %%%% { "Ausgabe" }[m
+[31m-            {"language is not defined: " language "iissue" * * warning$ "Issue"}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.iiss}  %  { "\bblIss{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"Iss."}[m
+[31m-   { curlanguage "ukrainian" =[m
+[31m-      {"Вип."}[m
+[31m-      { curlanguage "russian" =[m
+[31m-         {"Вып."}[m
+[31m-         { curlanguage "german" =[m
+[31m-            {"{H.}"}[m
+[31m-            {"language is not defined: " language "iiss" * * warning$ "Iss."}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.of}      %  { "\bblof{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"of"}[m
+[31m-   { curlanguage "german" =[m
+[31m-      { "von" }[m
+[31m-      { curlanguage "ukrainian" =[m
+[31m-         { "{із}" }[m
+[31m-         { curlanguage "russian" =[m
+[31m-            { "{из}" }[m
+[31m-            {"language is not defined: " language "of" * * warning$ "of"}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.etal}      %  { "\bblof{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"et~al."}[m
+[31m-   { curlanguage "german" =[m
+[31m-      { "u.~a." }[m
+[31m-      { curlanguage "ukrainian" =[m
+[31m-         {"{та~ін.}"}[m
+[31m-         { curlanguage "russian" =[m
+[31m-            {"и~др."}[m
+[31m-            {"language is not defined: " language  "et~al" * * warning$ "et~al."}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-[m
+[31m-FUNCTION {bbl.nnumber} %  { "\bblNumber{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"Number"}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      { "{Номер}" }[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"{Heft}"} %%% { "Anzahl" }[m
+[31m-         {"language is not defined: " language  "nnumber" * * warning$ "Number"}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.number}  %  { "\bblnumber{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"number"}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      {"{номер}"}[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"{Heft}"} %%% { "anzahl" }???[m
+[31m-         {"language is not defined: " language  "number" * * warning$ "number"}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.nr}     %   { "\bblno{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"no."}[m
+[31m-   { curlanguage "italian" =[m
+[31m-      { "no" }[m
+[31m-      { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-         { "{№}" }[m
+[31m-         { curlanguage "german" =[m
+[31m-            {"{H.}"} %%% { "an." }[m
+[31m-            {"language is not defined: " language "nr" * * warning$ "no."}[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.nnr}     %   { "\bblno{}" }[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"No."}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      { "{№}" }[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"{H.}"} %%% { "an." }[m
+[31m-         {"language is not defined: " language  "nnr" * * warning$ "No."}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.in}    %    { "\bblin{}" }[m
+[31m-{ curlanguage "english" = curlanguage "german" = or[m
+[31m-   {"in"}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      { "{в}" }[m
+[31m-      {"language is not defined: " language  "in" * * warning$ "in"}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.iin}  %     { "\bblIn{}" }[m
+[31m-{ curlanguage "english" = curlanguage "german" = or[m
+[31m-   {"In"}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      { "{В}" }[m
+[31m-      {"language is not defined: " language  "iin" * * warning$ "In"}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.pages}    % { "\bblpp." }[m
+[31m-{ curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or[m
+[31m-   {"p."} %%% {"pp."}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      {"{с.}"}[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"S."} %%%% { "s." }[m
+[31m-         {"language is not defined: " language  "pages" * * warning$ "p."}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.page}   %   { "\bblp."[m
+[31m-{ curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or[m
+[31m-   {"p."}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      {"{с.}"}[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"S."} %%%% { "s." }[m
+[31m-         {"language is not defined: " language  "page" * * warning$ "p."}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.ppages}%    { "\bblPp." }[m
+[31m-{ curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or[m
+[31m-   {"P."} %%%% { "Pp." }[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      {"{С.}"}[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"S."}[m
+[31m-         {"language is not defined: " language "ppages" * * warning$ "P."}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.ppage}  %   { "\bblP." }[m
+[31m-{ curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or[m
+[31m-   {"P."}[m
+[31m-   { curlanguage "ukrainian" = curlanguage "russian" = or[m
+[31m-      {"{С.}"}[m
+[31m-      { curlanguage "german" =[m
+[31m-         {"S."}[m
+[31m-         {"language is not defined: " language  "ppage" * * warning$ "P."}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.urldate}[m
+[31m-{ curlanguage "english" =[m
+[31m-   {"online; accessed"}[m
+[31m-   { curlanguage "ukrainian" =[m
+[31m-      { "{дата звернення}" }[m
+[31m-      { curlanguage "russian" =[m
+[31m-         { "{дата обращения}" }[m
+[31m-         { curlanguage "german" =[m
+[31m-            { "{online; abgerufen}" }[m
+[31m-            { "language is not defined: " language "urldate" * * warning$ "online; accessed" }[m
+[31m-         if$}[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.techreport} % rename to bbl.techreport[m
+[31m-{ curlanguage "english" =[m
+[31m-   { "Rep." }[m
+[31m-   { curlanguage "german" =[m
+[31m-      { "Bericht" }[m
+[31m-      { curlanguage "russian" =[m
+[31m-         { "{Отчет}" }[m
+[31m-         { "language is not defined: " language "techrep" * * warning$ "Rep." }[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.mthesis}[m
+[31m-{ curlanguage "english" =[m
+[31m-   { "Master's thesis" }[m
+[31m-   { curlanguage "german" =[m
+[31m-      { "Diss.~Mag." }[m
+[31m-      { curlanguage "russian" =[m
+[31m-         { "{Квалификационная работа магистра}" }[m
+[31m-         { "language is not defined: " language "mthesis" * * warning$ "Master's thesis" }[m
+[31m-      if$}[m
+[31m-   if$}[m
+[31m-if$}[m
+[31m-[m
+[31m-FUNCTION {bbl.phdthesis}[m
+[31m-{ curlanguage "english" =[m
+[31m-   { "Ph.\,D. thesis" }[m
+[31m-   { curlanguage "german" =[m
+[31m-      { "Diss.~Ph.\,D." }[m
+[31m-      { curlanguage "russian" =[m
+[31m-         { "{Дисс\ldots\ канди�
