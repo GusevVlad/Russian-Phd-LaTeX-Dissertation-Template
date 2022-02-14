@@ -19,7 +19,7 @@ jobs:
     # - name: Run makefile
     #   run: dockertex make
     - name: Run report
-      run: sh report.tex
+      run: latex report.tex
 
 
 # jobs:
