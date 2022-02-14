@@ -15,11 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: sudo apt-get --yes install texlive-full
+      run: sudo apt-get --yes install make texlive-xetex texlive-generic-extra texlive-lang-cyrillic texlive-lang-french texlive-science fonts-liberation latexmk biber
     # - name: Run makefile
     #   run: dockertex make
     - name: Run report
-      run: latex report.tex
+      run: latexmk report.tex
 
 
 # jobs:
