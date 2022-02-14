@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: sh install-dockertex.sh
+      run: apt-get --yes install texlive-full
     # - name: Run makefile
     #   run: dockertex make
     - name: Run report
