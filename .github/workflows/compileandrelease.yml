@@ -16,8 +16,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: sh install-dockertex.sh
-    - name: Run makefile
-      run: dockertex make
+    # - name: Run makefile
+    #   run: dockertex make
     - name: Run report
       run: ./report.tex
 
