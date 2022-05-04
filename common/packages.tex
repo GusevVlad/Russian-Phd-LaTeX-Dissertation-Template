@@ -16,6 +16,9 @@
 \RequirePackage{etoolbox}[2015/08/02]               % Для продвинутой проверки разных условий
 \providebool{presentation}
 
+
+
+
 %%% Поля и разметка страницы %%%
 \usepackage{pdflscape}                              % Для включения альбомных страниц
 \usepackage{geometry}                               % Для последующего задания полей
@@ -218,6 +221,7 @@
 %\newcommand{\citeinsynopsis}[1]{\ifsynopsis\else ~\cite{#1} \fi}
 
 %% Векторная графика
+\usepackage{pgfplots}
 
 \usepackage{tikz}                   % Продвинутый пакет векторной графики
 \usetikzlibrary{chains}             % Для примера tikz рисунка
