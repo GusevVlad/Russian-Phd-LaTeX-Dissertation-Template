@@ -5,16 +5,17 @@
 \end{center}
 %
 \vspace{0pt plus4fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
-\IfFileExists{images/logo.pdf}{
+\IfFileExists{images/logo.png}{
   \begin{minipage}[b]{0.5\linewidth}
     \begin{flushleft}
-      \includegraphics[height=3.5cm]{logo}
+      \includegraphics[height=4.5cm]{logo}
     \end{flushleft}
   \end{minipage}%
   \begin{minipage}[b]{0.5\linewidth}
     \begin{flushright}
       На правах рукописи\\
-%      \textsl {УДК \thesisUdk}
+    %  \textsl {УДК \thesisUdk}
+     \includegraphics[height=1.5cm]{images/personal-signature.png}
     \end{flushright}
   \end{minipage}
 }{
@@ -74,7 +75,7 @@
 \ifdefined\supervisorTwoDead
 \framebox{\supervisorTwoFio}
 \else
-\supervisorFio
+\supervisorTwoFio
 \fi
 \else
 Научный руководитель:

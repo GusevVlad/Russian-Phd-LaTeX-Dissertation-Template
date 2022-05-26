@@ -1,0 +1,65 @@
+\begin{tikzpicture}[,
+scale=0.55]
+\begin{axis}[
+  xlabel style = {{at={(axis description cs:.86,0)}}},
+  ylabel = {$\frac{F_{NU}}{P}, \text{кг}$},
+  ylabel style = {{at={(axis description cs:-0.12,.925)},rotate=270,anchor=south}},
+  xlabel = {$i$},
+  width=12cm, height=12cm
+]
+
+\addplot+[
+  solid, black, thick
+] coordinates {
+  (1.0, 636.4057815493709)
+  (2.0, 634.6318660428115)
+  (3.0, 635.7441799867659)
+  (4.0, 635.0732100970993)
+  (5.0, 634.0025581040499)
+  (6.0, 630.34652840305)
+  (7.0, 629.6517333592084)
+};
+\addlegendentry{{}{$R_{f}, \%$}}
+
+\addplot+[
+  dotted, black, thick
+] coordinates {
+  (1.0, 619.3310308602904)
+  (2.0, 647.3068977400761)
+  (3.0, 637.5026130427744)
+  (4.0, 634.9918048378662)
+  (5.0, 633.975098003229)
+  (6.0, 630.3376445105517)
+  (7.0, 629.6500407732217)
+};
+\addlegendentry{{}{$R_{RepU}, \%$}}
+
+\addplot+[
+  dashed, black, thick
+] coordinates {
+  (1.0, 777.75130887242)
+  (2.0, 654.8290290698062)
+  (3.0, 655.5373336917353)
+  (4.0, 768.4740116745477)
+  (5.0, 652.8966476689035)
+  (6.0, 656.2304425610325)
+  (7.0, 768.5452556856571)
+};
+\addlegendentry{{}{$\delta(\frac{\Delta U}{P}), \%$}}
+
+\addplot+[
+  dashdotted, black, thick
+] coordinates {
+  (1.0, 635.676329676043)
+  (2.0, 631.2286260767404)
+  (3.0, 632.5091923235811)
+  (4.0, 630.4022815971484)
+  (5.0, 630.1893369563833)
+  (6.0, 630.0359133994203)
+  (7.0, 629.6049060557589)
+};
+\addlegendentry{{}{$\frac{F_{NU}}{P}, \text{кг}$}}
+
+\end{axis}
+\end{tikzpicture}
+
