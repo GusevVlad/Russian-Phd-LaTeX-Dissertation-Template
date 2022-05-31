@@ -38,24 +38,11 @@
 % Вывести информацию о версиях используемых библиотек в лог сборки
 \listfiles
 
-%%% Управление компиляцией отдельных частей диссертации %%%
-% Необходимо сначала иметь полностью скомпилированный документ, чтобы все
-% промежуточные файлы были в наличии
-% Затем, для вывода отдельных частей можно воспользоваться командой \includeonly
-% Ниже примеры использования команды:
-%
-%\includeonly{semestr_report/part2}
-%\includeonly{semestr_report/contents,semestr_report/appendix,semestr_report/conclusion}
-%
-% Если все команды закомментированы, то документ будет выведен в PDF файл полностью
-
 \begin{document}
 
 \input{common/renames}                 % Переопределение именований
 
-
 \include{Dissertation/title}           % Титульный лист
-
 
 \include{semestr_report/contents}        % Оглавление
 \ifnumequal{\value{contnumfig}}{1}{}{\counterwithout{figure}{chapter}}
@@ -74,7 +61,6 @@
 \include{semestr_report/part5}
 
 
-%\include{semestr_report/part3}           % Глава 3
 \include{semestr_report/conclusion}      % Заключение
 \include{semestr_report/acronyms}        % Список сокращений и условных обозначений
 \include{Dissertation/prilo}      % Словарь терминов
@@ -86,7 +72,5 @@
 \setlength{\midchapskip}{20pt}
 \renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
 \renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
-
-% \include{semestr_report/appendix}        % Приложения
 
 \end{document}
