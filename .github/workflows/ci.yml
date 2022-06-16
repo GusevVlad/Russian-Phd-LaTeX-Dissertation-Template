@@ -8,7 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: raabf/texstudio-versions
+    container: raabf/texstudio-versions:texlive2018
     steps:
       - uses: actions/checkout@v3
-      - run: dockertex --tag texlive2016 pdftexreport report.tex
+      - run: echo 'deb http://deb.debian.org/debian/ buster  contrib non-free' >> /etc/apt/sources.list
+      - run: echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections 
+      - run: apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -qy fonts-liberation ttf-mscorefonts-installer
+      - run: fc-cache -f -v
+      - run: dockertex make report
