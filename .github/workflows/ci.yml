@@ -1,0 +1,15 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - disser
+
+jobs:
+  deploy:
+    runs-on: raabf/texstudio-versions
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          python-version: 3.x
+      - run: dockertex --tag texlive2016 pdftexreport report.tex
