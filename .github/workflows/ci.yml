@@ -6,10 +6,11 @@ on:
       - disser
 
 jobs:
-  deploy:
-    runs-on: raabf/texstudio-versions
+  build:
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
+      - uses: docker://raabf/texstudio-versions:texlive2016
         with:
           python-version: 3.x
       - run: dockertex --tag texlive2016 pdftexreport report.tex
