@@ -21,7 +21,7 @@ include compress.mk
 MKRC ?= latexmkrc
 
 # Source .tex file
-SOURCE ?= dissertation
+SOURCE ?= report
 
 # LaTeX compiler output .pdf file
 TARGET ?= $(SOURCE)
@@ -72,16 +72,16 @@ export TIMERON
 export TIKZFILE
 
 ##! компиляция всех файлов
-all: synopsis dissertation presentation
+all: synopsis report presentation
 
 define compile
 	latexmk -norc -r $(MKRC) $(LATEXMKFLAGS) $(BACKEND) -jobname=$(TARGET) $(SOURCE)
 endef
 
 ##! компиляция диссертации
-dissertation: TARGET=dissertation
-dissertation: SOURCE=dissertation
-dissertation:
+report: TARGET=report
+report: SOURCE=report
+report:
 	$(compile)
 
 ##! компиляция автореферата
@@ -97,8 +97,8 @@ presentation:
 	$(compile)
 
 ##! компиляция черновика диссертации
-dissertation-draft: DRAFTON=1
-dissertation-draft: dissertation
+report-draft: DRAFTON=1
+report-draft: report
 
 ##! компиляция черновика автореферата
 synopsis-draft: DRAFTON=1
@@ -106,10 +106,10 @@ synopsis-draft: synopsis
 
 ##! компиляция диссертации, автореферата, и презентации при помощи pdflatex
 pdflatex: BACKEND=-pdf
-pdflatex: dissertation synopsis presentation
+pdflatex: report synopsis presentation
 
 ##! компиляция черновиков всех файлов
-draft: dissertation-draft synopsis-draft
+draft: report-draft synopsis-draft
 
 ##! компиляция автореферата в формате А4 для печати
 synopsis-booklet: synopsis
@@ -134,7 +134,7 @@ tikz:
 
 ##! добавление .pdf автореферата и диссертации в систему контроля версий
 release: all
-	git add dissertation.pdf
+	git add report.pdf
 	git add synopsis.pdf
 
 ##! очистка от временных файлов цели TARGET
@@ -147,19 +147,19 @@ distclean-target:
 
 ##! очистка проекта от временных файлов
 clean:
-	"$(MAKE)" SOURCE=dissertation TARGET=dissertation clean-target
+	"$(MAKE)" SOURCE=report TARGET=report clean-target
 	"$(MAKE)" SOURCE=synopsis TARGET=synopsis clean-target
 	"$(MAKE)" SOURCE=presentation TARGET=presentation clean-target
 
 ##! полная очистка проекта от временных файлов
 distclean:
-	"$(MAKE)" SOURCE=dissertation TARGET=dissertation distclean-target
+	"$(MAKE)" SOURCE=report TARGET=report distclean-target
 	"$(MAKE)" SOURCE=synopsis TARGET=synopsis distclean-target
 	"$(MAKE)" SOURCE=presentation TARGET=presentation distclean-target
 
 # include after "all" rule
 include examples.mk
 
-.PHONY: all dissertation synopsis presentation dissertation-draft \
+.PHONY: all report synopsis presentation report-draft \
 synopsis-draft pdflatex draft synopsis-booklet presentation-booklet\
 tikz release clean-target distclean-target clean distclean
