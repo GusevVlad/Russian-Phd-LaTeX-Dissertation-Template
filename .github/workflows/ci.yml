@@ -12,17 +12,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: latexmk -pdf -pdflatex="xelatex %O %S" synopsis
-      - uses: actions/upload-artifact@v3
+      - uses: actions/download-artifact@v3
         with:
-          name: my-synopsis
-          path: synopsis.pdf
+          name: gh-synopsis
+          # path: synopsis.pdf
 
   disser:
     runs-on: ubuntu-latest
     container: raabf/latex-versions:texlive2018
     steps:
       - uses: actions/checkout@v3
-      - run: latexmk -pdf -pdflatex="xelatex %O %S" report
+      - run: latexmk -pdf report
       - uses: actions/upload-artifact@v3
         with:
           name: my-disser
