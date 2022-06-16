@@ -10,20 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     container: raabf/latex-versions:texlive2016
     steps:
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
       - run: latexmk -pdf -pdflatex="xelatex %O %S" synopsis
       - uses: actions/download-artifact@v3
         with:
-          name: gh-synopsis
+          name: synopsis.pdf
+      - name: Display structure of downloaded files
+        run: ls -R
           # path: synopsis.pdf
 
   disser:
     runs-on: ubuntu-latest
-    container: raabf/latex-versions:texlive2018
+    container: raabf/latex-versions:texlive2016
     steps:
       - uses: actions/checkout@v3
-      - run: latexmk -pdf report
-      - uses: actions/upload-artifact@v3
+      - run: latexmk -f -pdf -pdflatex="pdfTeX %O %S" report
+      - uses: actions/download-artifact@v3
         with:
-          name: my-disser
-          path: report.pdf
+          name: report.pdf
+      - name: Display structure of downloaded files
+        run: ls -R
