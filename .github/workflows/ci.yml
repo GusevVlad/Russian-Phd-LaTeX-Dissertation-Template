@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v3
       - run: latexmk -pdf -pdflatex="xelatex %O %S" synopsis
       - uses: actions/download-artifact@v3
-        with:
-          name: synopsis.pdf
+        # with:
+        #   name: synopsis.pdf
       - name: Display structure of downloaded files
         run: ls -R
           # path: synopsis.pdf
@@ -24,9 +24,9 @@ jobs:
     container: raabf/latex-versions:texlive2016
     steps:
       - uses: actions/checkout@v3
-      - run: latexmk -f -pdf report
+      - run: latexmk -f -pdf -pdflatex="xelatex %O %S" report
       - uses: actions/download-artifact@v3
-        with:
-          name: report.pdf
+        # with:
+        #   name: report.pdf
       - name: Display structure of downloaded files
         run: ls -R
