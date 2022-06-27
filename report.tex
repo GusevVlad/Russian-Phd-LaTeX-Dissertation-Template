@@ -63,9 +63,11 @@
 
 \include{semestr_report/conclusion}      % Заключение
 \include{semestr_report/acronyms}        % Список сокращений и условных обозначений
-\include{Dissertation/prilo}      % Словарь терминов
+
 
 \include{semestr_report/references}      % Список литературы
+
+
 
 %%% Настройки для приложений
 \appendix
@@ -73,5 +75,8 @@
 \setlength{\midchapskip}{20pt}
 \renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
 \renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
+
+\include{Dissertation/prilo}
+% \setcounter{totalappendix}{\value{chapter}} % Подсчёт количества приложений
 
 \end{document}
