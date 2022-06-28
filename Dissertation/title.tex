@@ -95,8 +95,31 @@
 \framebox{\supervisorFio}
 \else
 \supervisorFio
+
+\fi
+% \fi
+
+Консультанты:
+
+\consultOneRegalia
+
+\ifdefined\consultOneDead
+\framebox{\consultOneFio}
+\else
+\consultOneFio
+\fi
+\par
+% \vspace{0.013\paperheight}
+\consultTwoRegalia
+
+\ifdefined\consultTwoDead
+\framebox{\consultTwoFio}
+\else
+\consultTwoFio
 \fi
 \fi
+% \vspace{0.013\paperheight}\\
+
 
 \end{flushright}
 %

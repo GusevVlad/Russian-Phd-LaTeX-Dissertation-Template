@@ -28,6 +28,7 @@
 {\large Специальность \thesisSpecialtyTwoNumber\ "---\par <<\thesisSpecialtyTwoTitle>>}
 \fi
 
+
 \vspace{0pt plus1.5fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 \Large{Автореферат}\par
 \large{диссертации на соискание учёной степени\par \thesisDegree}
@@ -74,6 +75,22 @@
                               \framebox{\textbf{\supervisorFio}}
                               \else
                               \textbf{\supervisorFio}
+                              \fi
+                              \vspace{0.013\paperheight}\\
+                              
+    Консультанты:   &         \consultOneRegalia\par
+                              \ifdefined\consultOneDead
+                              \framebox{\textbf{\consultOneFio}}
+                              \else
+                              \textbf{\consultOneFio}
+                              \fi
+                              \par
+                              \vspace{0.013\paperheight}
+                              \consultTwoRegalia\par
+                              \ifdefined\consultTwoDead
+                              \framebox{\textbf{\consultTwoFio}}
+                              \else
+                              \textbf{\consultTwoFio}
                               \fi
                               \vspace{0.013\paperheight}\\
     \fi
