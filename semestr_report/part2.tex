@@ -60,8 +60,13 @@ $\Delta_{W} = {(C_{235, W})}_{calc}-{(C_{235, W})}_{given}$
 Для иллюстрации сложности решения подобной задачи рассмотрим некоторые вспомогательные функции $\delta_1$ и $\delta_2$, которые определены следующим образом:
 
 \begin{equation} \label{d1} 
-  \delta_1=\left[C_{235,P}-\left(C_{235,P}+KKP\times C_{236,P}\right)\right]
+  \delta_1=\left[C_{235,P\textit{экв.}}-\left(C_{235,P\textit{NU}}+KKP\times C_{236,P}\right)\right]
+  % \delta_{1}=C_{235,P\textit{экв.}}-(C_{235,P\textit{NU}}+\Delta C_{235})
 \end{equation} 
+
+% \begin{equation} \label{d1} 
+%  C_{235,P\textit{экв.}}=\left(C_{235,P \textit{ NU}}+KKP\times C_{236,P}\right)
+% \end{equation} 
 
 \begin{equation} \label{d2} 
     \delta_2=\left[C_{232,P}-{(C_{232,P})}_{lim}\right],             
@@ -197,10 +202,10 @@ $\Delta_{W} = {(C_{235, W})}_{calc}-{(C_{235, W})}_{given}$
   \begin{array}{l} {\quad \quad \quad \quad \quad  E+F=P+W,} \\ {FC_{i,F} + EC_{i,E} =PC_{i,P} +WC_{i,W} ,\;  i=1,2,...,m.} \end{array} 
 \end{equation} 
 
-\begin{equation}
-\label{eq_232_balance}
-  C_{232,P} \approx \frac{RepU}{P} C_{232,RepU}
-\end{equation}
+% \begin{equation}
+% \label{eq_232_balance}
+%   C_{232,P} \approx \frac{RepU}{P} C_{232,RepU}
+% \end{equation}
 
 \begin{equation}
   \label{eq_232_balance_}
@@ -215,15 +220,20 @@ $\Delta_{W} = {(C_{235, W})}_{calc}-{(C_{235, W})}_{given}$
 %     5 \times 10^{-7} \% \approx X \times 6.622 \times 10^{-7} \% \Rightarrow X \approx 0.755
 % \end{equation}
 
-\begin{equation}
-  \label{eq_232_balance_X}
-    \frac{RepU}{P} \leq 0,755
-\end{equation}
+% \begin{equation}
+%   \label{eq_232_balance_X}
+%     \frac{RepU}{P} \leq 0,755
+% \end{equation}
 
 \begin{equation}
   \label{eq_232_balance_X_}
     \frac{E}{P} \leq 0,755
 \end{equation}
+
+% \begin{equation}
+%   \label{eq_232_balance_X_}
+%     \frac{E}{P} \leq 0,5
+% \end{equation}
 
 Снова анализируя представленные в предыдущих разделах данные, легко увидеть, что полученные в результате прямого численного расчёта предельные величины отношений (исходный регенерат)/продукт приблизительно и составляют такую величину.
 Подобный подход позволяет аналитически оценить возможность применения схем на основе простейших модификаций ординарного каскада, исходя из изотопного состава регенерата. Следует отметить также, что подобные оценки можно также применять и для каскадных схем, в которых регенерат разбавляют уже внутри каскада, путём его подачи в качестве дополнительного питания, поскольку такие схемы по сути являются также только разбавляющими.
