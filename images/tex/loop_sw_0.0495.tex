@@ -1,16 +1,15 @@
 \begin{tikzpicture}[,
-scale=0.95,
 scale=0.95]
 \begin{axis}[
   xlabel style = {{at={(axis description cs:.86,0)}}},
-  ylabel = {$\delta(\frac{\Delta U}{P}), \%$},
-  ylabel style = {{at={(axis description cs:-0.08,.925)},rotate=270,anchor=south}},
+  ylabel = {$\delta(\frac{\Delta A}{P}), \%$},
+  ylabel style = {{at={(axis description cs:-0.08,.95)},rotate=270,anchor=south}},
   xlabel = {$i$},
-  width=16cm, height=16cm
+  width=16cm, height=16cm, xtick={1,2,3,4,5,6,7}
 ]
 
 \addplot+[
-  solid, black, thick
+  solid, green, thin
 ] coordinates {
   (1.0, -5.619564224321039)
   (2.0, -5.84441657242741)
@@ -20,10 +19,10 @@ scale=0.95]
   (6.0, -6.754284481908828)
   (7.0, -6.998000929961407)
 };
-\legend{{}{$(R_f)_\text{max}$}}
+\addlegendentry{{}{$(Y_f)_\text{max}$}}
 
 \addplot+[
-  dotted, black, thick
+  dotted, red, thick
 ] coordinates {
   (1.0, -5.619564224321039)
   (2.0, -5.84441657242741)
@@ -33,7 +32,7 @@ scale=0.95]
   (6.0, -6.754284481908828)
   (7.0, -6.998000929961407)
 };
-\legend{{}{$(R_{RepU})_\text{max}$}}
+\addlegendentry{{}{$(Y_{E})_\text{max}$}}
 
 \addplot+[
   dashed, black, thick
@@ -46,10 +45,10 @@ scale=0.95]
   (6.0, -6.739088245807983)
   (7.0, -6.991066392896656)
 };
-\legend{{}{$(\delta(\frac{\Delta U}{P}))_\text{min}$}}
+\addlegendentry{{}{$(\delta(\frac{\Delta A}{P}))_\text{min}$}}
 
 \addplot+[
-  dashdotted, black, thick
+  dashdotted, brown, thick
 ] coordinates {
   (1.0, -8.771994897379303)
   (2.0, -9.303209789751323)
@@ -59,10 +58,10 @@ scale=0.95]
   (6.0, -10.411774829351534)
   (7.0, -10.654096806225095)
 };
-\legend{{}{$(\delta(\frac{F_{NU}}{P}))_\text{min}$}}
+\addlegendentry{{}{$(\delta(\frac{F_{NU}}{P}))_\text{min}$}}
 
 \addplot+[
-  solid, brown, thick
+  solid, teal, thin
 ] coordinates {
   (1.0, -5.482150178426482)
   (2.0, -5.884813687357447)
@@ -72,7 +71,7 @@ scale=0.95]
   (6.0, -6.804418040883925)
   (7.0, -7.023084861927327)
 };
-\legend{{}{$(\frac{P_2}{P})_\text{min}$}}
+\addlegendentry{{}{$(\frac{P_2}{P})_\text{min}$}}
 
 \end{axis}
 \end{tikzpicture}
