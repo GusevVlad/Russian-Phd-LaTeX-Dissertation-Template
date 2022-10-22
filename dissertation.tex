@@ -38,23 +38,12 @@
 % Вывести информацию о версиях используемых библиотек в лог сборки
 \listfiles
 
-%%% Управление компиляцией отдельных частей диссертации %%%
-% Необходимо сначала иметь полностью скомпилированный документ, чтобы все
-% промежуточные файлы были в наличии
-% Затем, для вывода отдельных частей можно воспользоваться командой \includeonly
-% Ниже примеры использования команды:
-%
-%\includeonly{Dissertation/part2}
-%\includeonly{Dissertation/contents,Dissertation/appendix,Dissertation/conclusion}
-%
-% Если все команды закомментированы, то документ будет выведен в PDF файл полностью
-
 \begin{document}
 
 \input{common/renames}                 % Переопределение именований
 
-%%% Структура диссертации (ГОСТ Р 7.0.11-2011, 4)
 \include{Dissertation/title}           % Титульный лист
+
 \include{Dissertation/contents}        % Оглавление
 \ifnumequal{\value{contnumfig}}{1}{}{\counterwithout{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{}{\counterwithout{table}{chapter}}
@@ -63,14 +52,20 @@
 }{\counterwithin{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
 }{\counterwithin{table}{chapter}}
+
 \include{Dissertation/part1}           % Глава 1
-\include{Dissertation/part2}           % Глава 2
-\include{Dissertation/part3}           % Глава 3
+\include{Dissertation/part2}
+\include{Dissertation/part3}           % Глава 2
+\include{Dissertation/part4}           % Глава 2.5
+
+\include{Dissertation/part5}
+
+
 \include{Dissertation/conclusion}      % Заключение
 \include{Dissertation/acronyms}        % Список сокращений и условных обозначений
-\include{Dissertation/dictionary}      % Словарь терминов
+
 \include{Dissertation/references}      % Список литературы
-\include{Dissertation/lists}           % Списки таблиц и изображений (иллюстративный материал)
+
 
 %%% Настройки для приложений
 \appendix
@@ -79,6 +74,7 @@
 \renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
 \renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
 
-\include{Dissertation/appendix}        % Приложения
+\include{Dissertation/prilo}
+% \setcounter{totalappendix}{\value{chapter}} % Подсчёт количества приложений
 
 \end{document}
