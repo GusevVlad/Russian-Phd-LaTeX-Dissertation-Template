@@ -5,7 +5,7 @@
 %}
 
 %%% Изображения %%%
-\graphicspath{{images/}{Dissertation/images/}}         % Пути к изображениям
+\graphicspath{{images/}}         % Пути к изображениям
 
 %%% Интервалы %%%
 %% По ГОСТ Р 7.0.11-2011, пункту 5.3.6 требуется полуторный интервал
@@ -214,13 +214,3 @@
     \regtotcounter{totalcount@table}       % Если иным способом поставить в преамбуле то ошибка в числе таблиц
     \regtotcounter{TotPages}               % Если иным способом поставить в преамбуле то ошибка в числе страниц
 }
-
-
-% \AfterEndPreamble{
-% %% регистрируем счётчики в системе totcounter
-%     \regtotcounter{totalcount@figure}
-%     \regtotcounter{totalcount@table}       % Если иным способом поставить в преамбуле то ошибка в числе таблиц
-%     \regtotcounter{TotPages}               % Если иным способом поставить в преамбуле то ошибка в числе страниц
-%     \newtotcounter{totalappendix}
-%     \newtotcounter{totalchapter}
-% }
