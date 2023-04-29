@@ -32,7 +32,7 @@
 Коэффициент деления потоков смеси (срез) $\theta$, парциальные потоки компонентов $G_{i} ,\; G'_{i} ,\; G''_{i}$ и срезы парциальных потоков $\phi _{i}$ можно определить по формулам:
 
 \begin{equation} \label{GrindEQ__1_3_} 
-  \theta =\frac{L'}{L} ,\; G_{i} =LC_{i} ,\; G'_{i} =L'C'_{i} ,\; G''_{i} =L''C''_{i} , 
+  \theta =\frac{L'}{L} ,\; G_{i} =L \cdot C_{i} ,\; G'_{i} =L' \cdot C'_{i} ,\; G''_{i} =L'' \cdot C''_{i} , 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_4_} 
   \phi _{i} =\frac{G'_{i} }{G_{i} } ,\; 1-\phi _{i} =\frac{G''_{i} }{G_{i} } ,\; i=1,2,...,m. 
@@ -44,13 +44,13 @@
   L=L'+L'', 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_6_} 
-  G_{i} =G'_{i} +G''_{i} , i=1,\, 2,...,m.             
+  G_{i} =G'_{i} + G''_{i} , i=1,\, 2,...,m.             
 \end{equation} 
   
 Введенное в \ref{GrindEQ__1_3_} определение среза потоков ступени дает возможность представить уравнения \ref{GrindEQ__1_6_} в следующем виде:
 
 \begin{equation} \label{GrindEQ__1_7_} 
-  C_{i} =\theta C'_{i} +(1-\theta )C''_{i} . 
+  C_{i} =\theta  \cdot C'_{i} +(1-\theta ) \cdot C''_{i} . 
 \end{equation} 
 
 Для каждого компонента $i$ с относительной концентрацией вводят относительные коэффициенты разделения: полный $q_{ik}$, в отборе (потоке лёгкой фракции) $\alpha _{ik} $ и в отвале (потоке тяжёлой фракции) $\beta _{ik} $ и соответствующие коэффициенты обогащения $\varepsilon _{ik} ,\varepsilon '_{ik} ,\; \varepsilon ''_{ik} \; $
@@ -90,10 +90,10 @@
 Нетрудно показать, используя \ref{GrindEQ__1_11_}--\ref{GrindEQ__1_14_}, что величины $g_{i}$ и $g_{k}$  связаны с величинами относительных коэффициентов разделения следующими соотношениями:
 
 \begin{equation} \label{EQ__1_15_} 
-  g_{i} =\frac{\alpha _{ik} (\beta _{ik} -1)}{\alpha _{ik} -1} ,\; \; i\ne k,           
+  g_{i} =\frac{\alpha _{ik}  \cdot (\beta _{ik} -1)}{\alpha _{ik} -1} ,\; \; i\ne k,           
   \end{equation} 
   \begin{equation} \label{EQ__1_16_} 
-  g_{k} =\frac{\beta _{ik} -1}{(\alpha _{ik} -1)\beta _{ik} } =\frac{\varepsilon ''_{ik} }{\varepsilon '_{ik} } . 
+  g_{k} =\frac{\beta _{ik} -1}{(\alpha _{ik} -1) \cdot \beta _{ik} } =\frac{\varepsilon ''_{ik} }{\varepsilon '_{ik} } . 
 \end{equation} 
 
 При этом
@@ -108,7 +108,7 @@
   L=\sum _{j=1}^{m}L_{i}  =\sum _{j=1}^{m}\frac{g_{i} +1}{g_{i} }  L_{i} ',               
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_19_} 
-  C_{i} =\frac{g_{i} +1}{g_{i} } \frac{L_{i} '}{L} ,         
+  C_{i} =\frac{g_{i} +1}{g_{i} } \cdot \frac{L_{i} '}{L} ,         
 \end{equation}   
 
 \subsection{Симметричный противоточный каскад и система уравнений, описывающих для него массоперенос в общем виде}
@@ -125,27 +125,27 @@
 В стационарном режиме работы и в отсутствии потерь рабочего вещества на ступенях каскада, внешние параметры каскада должны удовлетворять уравнениям материального баланса:
 
 \begin{equation} \label{GrindEQ__1_21_} 
-  \begin{array}{l} {\quad \quad \quad \quad F=P+W,} \\ {FC_{i,F} =PC_{i,P} +WC_{i,W} ,\; i=1,2,...,m.} \end{array} 
+  \begin{array}{l} {\quad \quad \quad \quad F=P+W,} \\ {F \cdot C_{i,F} =P \cdot C_{i,P} +W \cdot C_{i,W} ,\; i=1,2,...,m.} \end{array} 
 \end{equation} 
 
-Ступени каскада пронумерованы последовательно от $s=1$ на отвальной ступени каскада до $s=N$ на отборной ступени. Считаем, что внешнее питание каскада (\textit{F}) подают на вход ступени с номером $f$. Внутренние параметры произвольной ступени с номером \textit{s} ($L_{s} $, $L'_{s} ,$ $L''_{s} ,$ $G_{i,s} ,$ $G'_{i,s} ,$ $G''_{i,s} $), где $L$ -- потоки вещества, а $G$ -- парциальные потоки (изотопов с индексами $i$) в стационарном режиме работы каскада, в отсутствие потерь рабочего вещества на ступенях каскада связаны уравнениями \ref{GrindEQ__1_5_},  \ref{GrindEQ__1_6_}.
+Ступени каскада пронумерованы последовательно от $s=1$ на отвальной ступени каскада до $s=N$ на отборной ступени. Считаем, что внешнее питание каскада (\textit{F}) подают на вход ступени с номером $f$. Внутренние параметры произвольной ступени с номером \textit{s} ($L_{s} $, $L'_{s} ,$ $L''_{s} ,$ $G_{i,s} ,$ $G'_{i,s} ,$ $G''_{i,s} $), где $L$ -- потоки вещества, а $G$ -- парциальные потоки (изотопов с индексами $i$) в стационарном режиме работы каскада, в отсутствие потерь рабочего вещества на ступенях каскада связаны уравнениями \ref{GrindEQ__1_5_}-\ref{GrindEQ__1_6_}.
 
 Уравнения баланса в «узлах» (точках соединения межступенных потоков) при симметричном соединении ступеней имеют вид:
 
 \begin{equation} \label{GrindEQ__1_24_} 
-  L_{s} =\theta _{s-1} L_{s-1} +(1-\theta _{s+1} )L_{s+1} ,\; \; s=1,\, 2,...,f-1,\, f+1,...,N, 
-  \end{equation} 
-  \begin{equation} \label{GrindEQ__1_25_} 
-  \begin{array}{l} {L_{s} C_{i,s} =\theta _{s-1} L_{s-1} C'_{i,s-1} +(1-\theta _{s+1} )L_{s+1} C''_{i,s+1} ,\; \; s=1,\, 2,...,f-1,\, f+1,...,N,} \\ {\; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \quad \quad \quad \quad \quad \; \; \; \; \; \; \; \; \; \; \; \; \; \quad \quad \quad \; \; \; \; \; \; \; \; \; \; \; \; \; \quad \quad \quad \; \; \; \; \; \; \; \; \; \; \; \; \; \quad \quad \; \quad i=1,\, 2,...,m.} \end{array} 
+  \begin{array}{l} {L_{s} =\theta _{s-1} \cdot L_{s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} ,\; \; s=1,\, 2,...,f-1,\, f+1,...,N, } \\
+    {L_{s} \cdot C_{i,s} =\theta _{s-1} \cdot L_{s-1} \cdot C'_{i,s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} \cdot C''_{i,s+1} ,} \\
+    {s=1,\, 2,...,f-1,\, f+1,...,N,\; i=1,2,...,m.}
+  \end{array}   
 \end{equation} 
 
 Для ступени подачи питания $f$ аналогичные уравнения выглядят так:
 
-\begin{equation} \label{GrindEQ__1_26_} 
-  L_{f} =\theta _{f-1} L_{f-1} +(1-\theta _{f+1} )L_{f+1} +F, 
-  \end{equation} 
-  \begin{equation} \label{GrindEQ__1_27_} 
-  L_{f} C_{i,f} =\theta _{f-1} L_{f-1} C'_{i,f-1} +(1-\theta _{f+1} )L_{f+1} C''_{i,f+1} +FC_{i,F} ,\quad i=\overline{1,m}.            
+\begin{equation} \label{GrindEQ__1_27_} 
+  \begin{array}{l} {L_{f} =\theta _{f-1} \cdot L_{f-1} +(1-\theta _{f+1} ) \cdot L_{f+1} +F, } \\
+  % \end{equation} 
+  % \begin{equation} \label{GrindEQ__1_27_} 
+  {L_{f} \cdot C_{i,f} =\theta _{f-1} \cdot L_{f-1} \cdot C'_{i,f-1} +(1-\theta _{f+1} ) \cdot L_{f+1}  \cdot C''_{i,f+1} + F \cdot C_{i,F} ,\quad i=\overline{1,m}.}\end{array}    
 \end{equation}
 
 Внешние и внутренние параметры каскада связаны граничными условиями:
@@ -154,22 +154,22 @@
   L_{0} =L'_{0} =L''_{0} =L_{N+1} =L'_{N+1} =L''_{N+1} =0, 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_29_} 
-  L'_{N} =\theta _{N} L_{N} =P,        
+  L'_{N} =\theta _{N} \cdot L_{N} =P,        
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_30_} 
-  L''_{1} =(1-\theta _{1} )L_{1} =W,        
+  L''_{1} =(1-\theta _{1} )\cdot L_{1} =W,        
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_31_} 
-  C'_{N} =C_{i,P} ,\; i=1,\; \; 2,...,m, 
+  C'_{N} =C_{i,P} ,\; i=1,...,m, 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_32_} 
-  C''_{1} =C_{i,W} ,\; i=1,\; \; 2,...,m, 
+  C''_{1} =C_{i,W} ,\; i=1,...,m, 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_33_} 
-  G'_{i,N} =PC_{i,P} ,\; i=1,\; \; 2,...,m, 
+  G'_{i,N} =P \cdot C_{i,P} ,\; i=1,...,m, 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_34_} 
-  G''_{i,1} =WC_{i,W} ,\; i=1,\; \; 2,...,m. 
+  G''_{i,1} =W \cdot C_{i,W} ,\; i=1,...,m. 
 \end{equation} 
 
 Соотношения (\ref{GrindEQ__1_21_})--(\ref{GrindEQ__1_34_}) описывают простейшую физико-математическую модель противоточного симметричного каскада, предназначенного для разделения многокомпонентной смеси. Анализ данной системы показывает, что она представляют собой системы нелинейных разностных уравнений относительно функций $C_{i,s}$. Существенной проблемой при решении подобных систем является то, что в эти уравнения (либо в их граничные условия) входят значения концентраций, которые неизвестны заранее и должны быть определены из решения этих же уравнений. В общем случае, система (\ref{GrindEQ__1_24_})--(\ref{GrindEQ__1_34_}) для своего решения требует использования численных методов.
@@ -181,60 +181,63 @@
 
 \subsection{«Квазиидеальный» каскад}
 
-Рассмотрим случай симметричного противоточного каскада с постоянными по его длине относительными коэффициентами разделения $q_{ik} ,\; \alpha _{ik} ,\; \beta _{ik} $ $(i=1,\; 2,...,m;$ \textit{k}--номер «опорного» компонента). Это условие обеспечивает постоянство величин \textit{g${}_{i}$} и $\phi _{i} $. Следовательно, соотношения (\ref{GrindEQ__1_24_})--(\ref{GrindEQ__1_27_}) приводятся к виду \cite{sulaberidzeTeoriyaKaskadovDlya2011}:
+Рассмотрим случай симметричного противоточного каскада с постоянными по его длине относительными коэффициентами разделения $q_{ik} ,\; \alpha _{ik} ,\; \beta _{ik} $ $(i=1,...,m;$ \textit{k}--номер «опорного» компонента). Это условие обеспечивает постоянство величин \textit{g${}_{i}$} и $\phi _{i} $. Следовательно, соотношения (\ref{GrindEQ__1_24_})--(\ref{GrindEQ__1_27_}) приводятся к виду \cite{sulaberidzeTeoriyaKaskadovDlya2011}:
 
 \begin{equation} \label{GrindEQ__1_52_} 
-  G'_{i} (s-1)+\frac{1}{g_{i} } G'_{i} (s+1)-\frac{g_{i} +1}{g_{i} } G'_{i} (s)+\delta _{sf} Fc_{iF} =0,\; \; i\ne k, 
+  G'_{i} (s-1)+\frac{1} \cdot {g_{i} } G'_{i} (s+1)-\frac{g_{i} +1}{g_{i} }\cdot G'_{i} (s)+\delta _{sf} \cdot F \cdot C_{i,F} =0,\; \; i\ne k, 
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_53_} 
-  G'_{k} (s-1)+\frac{1}{g_{k} } G'_{k} (s+1)-\frac{g_{k} +1}{g_{k} } G'_{k} (s)+\delta _{sf} Fc_{kF} =0, 
+  G'_{k} (s-1)+\frac{1}{g_{k} } \cdot G'_{k} (s+1)-\frac{g_{k} +1}{g_{k} }\cdot G'_{k} (s)+\delta _{sf} \cdot F \cdot C_{k,F} =0, 
 \end{equation}
 где $s$ – текущий номер ступени, отсчитываемый от «тяжелого» конца каскада к его «легкому» концу $\delta _{sf} =\left\{\begin{array}{l} {0,\; \; s\ne f} \\ {1,\; \; s=f} \end{array}\right.$
 
 Уравнения (\ref{GrindEQ__1_52_})--(\ref{GrindEQ__1_53_}) представляют собой линейные разностные уравнения второго порядка относительно неизвестных функций $G'_{i} (s)$. Граничные условия для них имеют вид:
 
 \begin{equation} \label{GrindEQ__1_54_} 
-  \left\{\begin{array}{l} {G'_{i} (0)=G'_{i} (N+1)=0,\; \; i=1,\; 2,...,m} \\ {G'_{i} (N)=PC_{i,P} ,\; \; i=1,\; 2,...,m} \\ {G'_{i} (1)=g_{i} WC_{i,W} ,\; \; i\ne k} \\ {G''_{k} (1)=g_{k} WC_{i,W} .} \end{array}\right.  
+  \left\{\begin{array}{l} {G'_{i} (0)=G'_{i} (N+1)=0,\; \; i=1,\; 2,...,m} \\
+    {G'_{i} (N)=P \cdot C_{i,P} ,\; \; i=1,\; 2,...,m} \\
+    {G'_{i} (1)=g_{i} \cdot W \cdot C_{i,W} ,\; \; i\ne k} \\
+    {G''_{k} (1)=g_{k} \cdot W \cdot C_{i,W} .} \end{array}\right.  
 \end{equation} 
 
 Решение системы уравнений (\ref{GrindEQ__1_52_})--(\ref{GrindEQ__1_53_}), с использованием уравнений баланса (\ref{GrindEQ__1_21_}) и граничных условий (\ref{GrindEQ__1_54_}), легко преобразуется в уравнения связи внешних параметров такого каскада с длинами его секций и параметрами ступени:
 
 \begin{equation} \label{GrindEQ__1_55_} 
-  \frac{P}{F} =\sum _{j=1}^{m}C_{j,F} \frac{1-g_{j}^{-f} }{1-g_{j}^{-N-1}} ,\; \; s=f,...,N ,                                                  
+  \frac{P}{F} =\sum _{j=1}^{m}C_{j,F} \cdot \frac{1-g_{j}^{-f} }{1-g_{j}^{-N-1}} ,\; \; s=f,...,N ,                                                  
   \end{equation} 
   \begin{equation} \label{GrindEQ__1_56_} 
-  \frac{W}{F} =\sum _{j=1}^{m}C_{j,F} \frac{g_{j}^{N+1-f} -1}{g_{j}^{N+1} -1} ,\; \; s=1,...,f-1 ,                                            
+  \frac{W}{F} =\sum _{j=1}^{m}C_{j,F} \cdot \frac{g_{j}^{N+1-f} -1}{g_{j}^{N+1} -1} ,\; \; s=1,...,f-1 ,                                            
 \end{equation}
 
 \begin{equation} \label{GrindEQ__1_57_} 
-  C_{i,P}=C_{i,F} \frac{1-g_{i}^{-f}}{1-g_{i}^{-N-1}} / \sum_{j=1}^{m} C_{j,F} \frac{1-g_{j}^{-f}}{1-g_{j}^{-N-1}}, i=1,2, \ldots, m                             
+  C_{i,P}=C_{i,F} \cdot \frac{1-g_{i}^{-f}}{1-g_{i}^{-N-1}} / \sum_{j=1}^{m} C_{j,F} \cdot \frac{1-g_{j}^{-f}}{1-g_{j}^{-N-1}},\; \;  i=1, \ldots, m                             
 \end{equation}
 
 \begin{equation} \label{GrindEQ__1_58_} 
-  C_{i,W}=C_{i,F} \frac{g_{i}^{N+1-f}-1}{g_{i}^{N+1}-1} / \sum_{j=1}^{m} C_{j,F} \frac{g_{j}^{N+1-f}-1}{g_{j}^{N+1}-1}, i=1,2, \ldots, m                         
+  C_{i,W}=C_{i,F} \cdot \frac{g_{i}^{N+1-f}-1}{g_{i}^{N+1}-1} / \sum_{j=1}^{m} C_{j,F} \cdot \frac{g_{j}^{N+1-f}-1}{g_{j}^{N+1}-1},\; \;  i=1, \ldots, m                         
 \end{equation} 
 
 Далее, распределение потока $L(s)$, концентраций компонентов и коэффициента деления потоков по ступеням каскада можно определить по формулам \cite{sulaberidzeTeoriyaKaskadovDlya2011}:
 
 \begin{equation} \label{GrindEQ__1_59_} 
-  L(s)=\sum_{j=1}^{m} G_{j}^{\prime}(s) \frac{1+g_{j}}{g_{j}}=\left\{\begin{array}{c}
-  P \sum_{j=1}^{m} \frac{g_{j}+1}{g_{j}-1} C_{j,P}\left(1-g_{j}^{s-N-1}\right), s=f, \ldots, N \\
-  W \sum_{j=1}^{m} \frac{g_{j}+1}{g_{j}-1} C_{j,P}\left(g_{j}^{s}-1\right), s=1, \ldots, f-1
+  L(s)=\sum_{j=1}^{m} G_{j}^{\prime}(s) \cdot \frac{1+g_{j}}{g_{j}}=\left\{\begin{array}{c}
+  P \cdot \sum_{j=1}^{m} \frac{g_{j}+1}{g_{j}-1} \cdot C_{j,P} \cdot \left(1-g_{j}^{s-N-1}\right),\; \;  s=f, \ldots, N \\
+  W \cdot \sum_{j=1}^{m} \frac{g_{j}+1}{g_{j}-1} \cdot C_{j,P} \cdot \left(g_{j}^{s}-1\right),\; \;  s=1, \ldots, f-1,
   \end{array}\right.
 \end{equation} 
 
 \begin{equation} \label{GrindEQ__1_60_} 
-  C_{i} (s)=\frac{1+g_{j} }{g_{j} } \cdot \frac{G''_{i} (s)}{G_{i} (s)} =\left\{\begin{array}{l} {\frac{C_{i,P} \frac{g_{j} }{g_{j} -1} \left(1-g_{j}^{s-N-1} \right)}{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1}  C_{j,P} \left(1-g_{j}^{s-N-1} \right)} ,\; \; s=f,...,N,} \\ {\; \frac{C_{i,W} \frac{g_{j} }{g_{j} -1} \left(g_{j}^{s} -1\right)}{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1}  C_{j,W} \left(g_{j}^{s} -1\right)} ,\; \; s=1,...,f-1,} \end{array}\right.  
+  C_{i} (s)=\frac{1+g_{j} }{g_{j} } \cdot \frac{G''_{i} (s)}{G_{i} (s)} =\left\{\begin{array}{l} {\frac{C_{i,P}\cdot \frac{g_{j} }{g_{j} -1}\cdot \left(1-g_{j}^{s-N-1} \right)}{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1} \cdot C_{j,P} \cdot \left(1-g_{j}^{s-N-1} \right)} ,\; \; s=f,...,N} \\ {\; \frac{C_{i,W} \cdot \frac{g_{j} }{g_{j} -1} \cdot \left(g_{j}^{s} -1\right)}{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1} \cdot C_{j,W} \cdot \left(g_{j}^{s} -1\right)} ,\; \; s=1,...,f-1,} \end{array}\right.  
 \end{equation} 
 
 \begin{equation} \label{GrindEQ__1_61_} 
-\begin{array}{l} {\theta (s)=\frac{\sum _{j=1}^{m}G'_{j} (s) }{\sum _{j=1}^{m}G_{j} (s) } =\left\{\begin{array}{l} {\frac{\sum _{j=1}^{m}\frac{g_{j} }{g_{j} -1} C_{j,P} \left(1-g_{j}^{s-N-1} \right) }{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1}  C_{j,P} \left(1-g_{j}^{s-N-1} \right)} ,\; \; s=f,...,N,} \\ {\; \frac{\sum _{j=1}^{m}\frac{g_{j} }{g_{j} -1} C_{j,W} \left(g_{j}^{s} -1\right) }{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1}  C_{j,W} \left(g_{j}^{s} -1\right)} ,\; \; s=1,...,f-1.} \end{array}\right. } \\ {\; } \end{array} 
+  \begin{array}{l} {\theta (s)=\frac{\sum _{j=1}^{m}G'_{j} (s) }{\sum _{j=1}^{m}G_{j} (s) } =\left\{\begin{array}{l} {\frac{\sum _{j=1}^{m}\frac{g_{j} }{g_{j} -1} \cdot C_{j,P} \cdot \left(1-g_{j}^{s-N-1} \right) }{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1} \cdot C_{j,P} \cdot \left(1-g_{j}^{s-N-1} \right)} ,\; \; s=f,...,N} \\ {\; \frac{\sum _{j=1}^{m}\frac{g_{j} }{g_{j} -1} \cdot C_{j,W} \cdot \left(g_{j}^{s} -1\right) }{\sum _{j=1}^{m}\frac{g_{j} +1}{g_{j} -1} \cdot C_{j,W} \cdot \left(g_{j}^{s} -1\right)} ,\; \; s=1,...,f-1.} \end{array}\right. } \\ {\; } \end{array} 
 \end{equation}
 
 Формулу для расчета относительного суммарного потока в каскаде легко получить из (\ref{GrindEQ__1_59_}), суммированием по всем ступеням каскада
 
 \begin{equation} \label{GrindEQ__1_62_} 
-  \sum _{s=1}^{N}\frac{L(s)}{P} =\sum _{i=1}^{m}\left\{\frac{g_{i} +1}{g_{i} -1} \left[\frac{W}{P} C_{i,W} (f-1)-C_{i,P} \left(N+1-f\right)\right]\right\}  .   
+  \sum _{s=1}^{N}\frac{L(s)}{P} =\sum _{i=1}^{m}\left [\frac{g_{i} +1}{g_{i} -1} \cdot \left(\frac{W}{P} \cdot C_{i,W} \cdot (f-1)-C_{i,P} \cdot \left(N+1-f\right)\right)\right ]   .   
 \end{equation} 
   
 Рассмотренный выше каскад отличается тем, что относительные коэффициенты разделения $q_{ik} ,\; \alpha _{ik} ,\; \beta _{ik} $ (и, соответственно, срезы парциальных компонентов $\phi _{i} ,\; \; \phi _{k} $ и параметры $g_{i} $, $g_{k} $) остаются постоянными по длине каскада. Для таких каскадов в работе \cite{sazykinKvaziidealnyeKaskadyDlya2000} был введен термин «квазиидеальный» каскад.
@@ -257,20 +260,20 @@
 из уравнений (\ref{GrindEQ__1_55_})--(\ref{GrindEQ__1_58_}) выводятся уравнения каскада со ступенями симметричными относительно пары компонентов с номерами $n$ и $k$:
   
 \begin{equation} \label{GrindEQ__1_70_} 
-  \frac{P}{F} =\sum _{j=1}^{m}C_{j,F} \frac{(R_{nk,W} )^{-d_{j} } -(R_{nk,F} )^{-d_{j} } }{(R_{nk,W} )^{-d_{j} } -(R_{nk,P} )^{-d_{j} } }  ,                                            
+  \frac{P}{F} =\sum _{j=1}^{m}C_{j,F} \cdot \frac{(R_{nk,W} )^{-d_{j} } -(R_{nk,F} )^{-d_{j} } }{(R_{nk,W} )^{-d_{j} } -(R_{nk,P} )^{-d_{j} } }  ,                                            
 \end{equation} 
 \begin{equation} \label{GrindEQ__1_71_} 
-  \frac{W}{F} =\sum _{j=1}^{m}C_{j,F} \frac{(R_{nk,F} )^{-d_{j} } -(R_{nk,P} )^{-d_{j} } }{(R_{nk,W} )^{-d_{j} } -(R_{nk,P} )^{-d_{j} } }  ,                                        
+  \frac{W}{F} =\sum _{j=1}^{m}C_{j,F} \cdot \frac{(R_{nk,F} )^{-d_{j} } -(R_{nk,P} )^{-d_{j} } }{(R_{nk,W} )^{-d_{j} } -(R_{nk,P} )^{-d_{j} } }  ,                                        
 \end{equation} 
 
 При этом на всех ступенях каскада $\alpha _{ik} \ne \beta _{ik} \; (i\ne n)$.
 
 \begin{equation} \label{GrindEQ__1_72_} 
-  C_{i,P}=C_{i,F} \frac{\left(R_{n k,W}\right)^{-d_{i}}-\left(R_{n k,F}\right)^{-d_{i}}}{\left(R_{n k,W}\right)^{-d_{i}}-\left(R_{n k,P}\right)^{-d_{i}}} / \sum_{j=1}^{m} C_{j,F} \frac{\left(R_{n k,W}\right)^{-d_{j}}-\left(R_{n k,F}\right)^{-d_{j}}}{\left(R_{n k,W}\right)^{-d_{j}}-\left(R_{n k,P}\right)^{-d_{j}}},
+  C_{i,P}=C_{i,F} \cdot \frac{\left(R_{n k,W}\right)^{-d_{i}}-\left(R_{n k,F}\right)^{-d_{i}}}{\left(R_{n k,W}\right)^{-d_{i}}-\left(R_{n k,P}\right)^{-d_{i}}} / \sum_{j=1}^{m} C_{j,F} \cdot \frac{\left(R_{n k,W}\right)^{-d_{j}}-\left(R_{n k,F}\right)^{-d_{j}}}{\left(R_{n k,W}\right)^{-d_{j}}-\left(R_{n k,P}\right)^{-d_{j}}},
 \end{equation} 
 
 \begin{equation} \label{GrindEQ__1_73_} 
-  C_{i,W}=C_{i,F} \frac{\left(R_{n k,F}\right)^{-d_{i}}-\left(R_{n k,P}\right)^{-d_{i}}}{\left(R_{n k,W}\right)^{-d_{i}}-\left(R_{n k,P}\right)^{-d_{i}}} / \sum_{j=1}^{m} C_{j,F} \frac{\left(R_{n k,F}\right)^{-d_{j}}-\left(R_{n k,P}\right)^{-d_{j}}}{\left(R_{n k,W}\right)^{-d_{j}}-\left(R_{n k,P}\right)^{-d_{j}}},
+  C_{i,W}=C_{i,F} \cdot \frac{\left(R_{n k,F}\right)^{-d_{i}}-\left(R_{n k,P}\right)^{-d_{i}}}{\left(R_{n k,W}\right)^{-d_{i}}-\left(R_{n k,P}\right)^{-d_{i}}} / \sum_{j=1}^{m} C_{j,F} \cdot \frac{\left(R_{n k,F}\right)^{-d_{j}}-\left(R_{n k,P}\right)^{-d_{j}}}{\left(R_{n k,W}\right)^{-d_{j}}-\left(R_{n k,P}\right)^{-d_{j}}},
 \end{equation} 
 
 \begin{equation} \label{GrindEQ__1_74_} 
@@ -289,7 +292,7 @@
 \end{equation} 
 где 
 \begin{equation} \label{EQ_Mstar} 
-  M^{*} =\frac{M_{n} +M_{k} }{2},        
+  M^{*} =\frac{M_{n} +M_{k} }{2}.    
 \end{equation} 
 
 Из (\ref{GrindEQ__1_75_})--(\ref{GrindEQ__1_76_}) непосредственно следует, что для всех компонентов с $M_{i} $$\mathrm{<}$$M^{*} $ величины $g_{i} $$\mathrm{>}$1, если же $M_{i} $$\mathrm{>}$$M^{*} $, то $g_{i} $$\mathrm{<}$1. Из соотношений (\ref{GrindEQ__1_72_}) и (\ref{GrindEQ__1_73_}) при выполнении условий $N-f+1>>1,\; \; f-1>>1$ («длинный каскад») следует, что в таком $R$-каскаде компоненты с $g_{i} $$\mathrm{>}$1 ($M_{i} $$\mathrm{<}$$M^{*}$) обогащаются к «легкому» выходящему потоку каскада, а компоненты с $g_{i} $$\mathrm{<}$1 ($M_{i} $$\mathrm{>}$$M^{*}$) обогащаются к «тяжелому» выходящему потоку каскада. Следовательно, величина параметра $M^{*}$ полностью определяет направление обогащения компонентов смеси в $R$-каскаде. 
@@ -297,7 +300,7 @@
 Суммарный поток $R$-каскада равен \cite{sulaberidzeTeoriyaKaskadovDlya2011}:
 
 \begin{equation} \label{GrindEQ__1_77_} 
-  \sum _{s=1}^{N}L(s) =\sum _{j=1}^{m}\frac{PC_{j,P} \ln R_{nk,P} +WC_{j,W} \ln R_{nk,W} -FC_{j,F} \ln R_{nk,F} }{\frac{g_{j} -1}{g_{j} +1} \ln g_{n} }              
+  \sum _{s=1}^{N}L(s) =\sum _{j=1}^{m}\frac{P \cdot C_{j,P} \cdot \ln(R_{nk,P}) +W \cdot C_{j,W} \cdot \ln(R_{nk,W}) -F \cdot C_{j,F} \cdot \ln(R_{nk,F})}{\frac{g_{j} -1}{g_{j} +1} \cdot \ln(g_{n})}              
 \end{equation} 
 
 Отметим, что как следует из приведенных выше соотношений, выбор опорного компонента определяет величину $M^{*}$. При этом, строго говоря, величина $M^{*}$ для любой $m$-компонентной смеси является дискретной функцией номера опорного компонента и, соответственно, имеет ограниченный набор допустимых значений, определяемых возможным количеством «опорных» компонентов смеси. В \cite{sulaberidzeSravnenieOptimalnyhModelnyh2008} предложено формально ввести в рассмотрение «виртуальные» компоненты с исчезающее малой концентрацией (на несколько порядков меньше наименьшей концентрации «реальных» компонентов смеси) и с массовыми числами, лежащими в пределах от \textit{M${}_{1}$} до \textit{M${}_{m}$}. В этом случае значение $M^{*}$ может принимать любые значения в интервале от \textit{M${}_{1}$} до \textit{M${}_{m}$}. Это позволяет построить кривую зависимости суммарного потока в каскаде от величины $M^{*}$ и найти ее минимум.
