@@ -125,28 +125,34 @@
 В стационарном режиме работы и в отсутствии потерь рабочего вещества на ступенях каскада, внешние параметры каскада должны удовлетворять уравнениям материального баланса:
 
 \begin{equation} \label{GrindEQ__1_21_} 
-  \begin{array}{l} {\quad \quad \quad \quad F=P+W,} \\ {F \cdot C_{i,F} =P \cdot C_{i,P} +W \cdot C_{i,W} ,\; i=1,2,...,m.} \end{array} 
+  \begin{array}{l} {\quad \quad \quad \quad F=P+W,} \\ {F \cdot C_{i,F} =P \cdot C_{i,P} +W \cdot C_{i,W} ,\; i=1,...,m.} \end{array} 
 \end{equation} 
 
 Ступени каскада пронумерованы последовательно от $s=1$ на отвальной ступени каскада до $s=N$ на отборной ступени. Считаем, что внешнее питание каскада (\textit{F}) подают на вход ступени с номером $f$. Внутренние параметры произвольной ступени с номером \textit{s} ($L_{s} $, $L'_{s} ,$ $L''_{s} ,$ $G_{i,s} ,$ $G'_{i,s} ,$ $G''_{i,s} $), где $L$ -- потоки вещества, а $G$ -- парциальные потоки (изотопов с индексами $i$) в стационарном режиме работы каскада, в отсутствие потерь рабочего вещества на ступенях каскада связаны уравнениями \ref{GrindEQ__1_5_}-\ref{GrindEQ__1_6_}.
 
 Уравнения баланса в «узлах» (точках соединения межступенных потоков) при симметричном соединении ступеней имеют вид:
 
-\begin{equation} \label{GrindEQ__1_24_} 
-  \begin{array}{l} {L_{s} =\theta _{s-1} \cdot L_{s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} ,\; \; s=1,\, 2,...,f-1,\, f+1,...,N, } \\
-    {L_{s} \cdot C_{i,s} =\theta _{s-1} \cdot L_{s-1} \cdot C'_{i,s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} \cdot C''_{i,s+1} ,} \\
-    {s=1,\, 2,...,f-1,\, f+1,...,N,\; i=1,2,...,m.}
-  \end{array}   
-\end{equation} 
+% \begin{equation} \label{GrindEQ__1_24_} 
+%   \begin{array}{l} {L_{s} =\theta _{s-1} \cdot L_{s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} ,\; \; s=1,\, 2,...,f-1,\, f+1,...,N, } \\
+%     {L_{s} \cdot C_{i,s} =\theta _{s-1} \cdot L_{s-1} \cdot C'_{i,s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} \cdot C''_{i,s+1} ,} \\
+%     {s=1,\, 2,...,f-1,\, f+1,...,N,\; i=1,2,...,m.}
+%   \end{array}   
+% \end{equation} 
+\begin{subequations}\label{GrindEQ__1_24_}
+  \begin{empheq}[left=\empheqlbrace]{align}
+    &L_{s} =\theta _{s-1} \cdot L_{s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} ,\; \; s=1,...,N   \\
+    &L_{s} \cdot C_{i,s} =\theta _{s-1} \cdot L_{s-1} \cdot C'_{i,s-1} +(1-\theta _{s+1} ) \cdot L_{s+1} \cdot C''_{i,s+1}, \, s=1,...,N.
+  \end{empheq}
+\end{subequations}
 
 Для ступени подачи питания $f$ аналогичные уравнения выглядят так:
 
-\begin{equation} \label{GrindEQ__1_27_} 
-  \begin{array}{l} {L_{f} =\theta _{f-1} \cdot L_{f-1} +(1-\theta _{f+1} ) \cdot L_{f+1} +F, } \\
-  % \end{equation} 
-  % \begin{equation} \label{GrindEQ__1_27_} 
-  {L_{f} \cdot C_{i,f} =\theta _{f-1} \cdot L_{f-1} \cdot C'_{i,f-1} +(1-\theta _{f+1} ) \cdot L_{f+1}  \cdot C''_{i,f+1} + F \cdot C_{i,F} ,\quad i=\overline{1,m}.}\end{array}    
-\end{equation}
+\begin{subequations}\label{GrindEQ__1_27_}
+  \begin{empheq}[left=\empheqlbrace]{align}
+    &L_{f} =\theta _{f-1} \cdot L_{f-1} +(1-\theta _{f+1} ) \cdot L_{f+1} +F \\
+    &L_{f} \cdot C_{i,f} =\theta _{f-1} \cdot L_{f-1} \cdot C'_{i,f-1} +(1-\theta _{f+1} ) \cdot L_{f+1}  \cdot C''_{i,f+1} + F \cdot C_{i,F} ,\quad i=\overline{1,m}.
+  \end{empheq}
+\end{subequations}
 
 Внешние и внутренние параметры каскада связаны граничными условиями:
 
