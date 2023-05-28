@@ -1,0 +1,73 @@
+\begin{tikzpicture}[,
+scale=0.95]
+\begin{axis}[
+  xlabel style = {{at={(axis description cs:.86,0)}}},
+  ylabel = {$\delta(\frac{F_{n}}{P}), \%$},
+  ylabel style = {{at={(axis description cs:-0.08,.94)},rotate=270,anchor=south}},
+  xlabel = {$i$},
+  width=8cm, height=8cm, xtick={1,2,3,4,5,6,7}
+]
+
+\addplot+[
+  solid, green, thin
+] coordinates {
+  (1.0, 19.687021181751184)
+  (2.0, 20.017779213687128)
+  (3.0, 20.091540266014306)
+  (4.0, 20.08961878570179)
+  (5.0, 20.627959357778447)
+  (6.0, 20.524771348961046)
+  (7.0, 20.237066571720984)
+};
+\addlegendentry{{}{$(Y_f)_\text{max}$}}
+
+\addplot+[
+  dotted, red, thick
+] coordinates {
+  (1.0, 19.20909030731813)
+  (2.0, 19.528629015260723)
+  (3.0, 19.57263092119185)
+  (4.0, 19.5271327236769)
+  (5.0, 20.09773453421201)
+  (6.0, 20.02135608874662)
+  (7.0, 19.99051596016357)
+};
+\addlegendentry{{}{$(Y_{E''})_\text{max}$}}
+
+\addplot+[
+  dashed, black, thick
+] coordinates {
+  (1.0, 16.49050645013267)
+  (2.0, 18.222831990519317)
+  (3.0, 16.96929534933861)
+};
+\addlegendentry{{}{$(\delta(\frac{\Delta A}{P}))_\text{min}$}}
+
+\addplot+[
+  dashdotted, brown, thick
+] coordinates {
+  (1.0, 19.79946368740557)
+  (2.0, 20.613912027916914)
+  (3.0, 20.157925558475863)
+  (4.0, 20.637735547407885)
+  (5.0, 20.29983122053497)
+  (6.0, 20.59145091190089)
+  (7.0, 20.841881435954534)
+};
+\addlegendentry{{}{$(\delta(\frac{F_{n}}{P}))_\text{min}$}}
+
+\addplot+[
+  solid, teal, thin
+] coordinates {
+  (1.0, 19.15408430355219)
+  (2.0, 19.931931248985368)
+  (3.0, 19.814674132696698)
+  (4.0, 20.168463806234982)
+  (5.0, 19.7585601066119)
+  (6.0, 20.28601601650054)
+  (7.0, 20.19097290817359)
+};
+\addlegendentry{{}{$(\frac{P_2}{P})_\text{min}$}}
+
+\end{axis}
+\end{tikzpicture}
