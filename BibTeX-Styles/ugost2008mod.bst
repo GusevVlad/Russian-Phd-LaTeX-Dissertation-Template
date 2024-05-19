@@ -534,7 +534,7 @@ FUNCTION {bbl.pages}    % { "\bblpp." }
 { curlanguage "english" = curlanguage "french" = or curlanguage "italian" = or
    {"p."} %%% {"pp."}
    { curlanguage "ukrainian" = curlanguage "russian" = or
-      {"{с.}"}
+      {"{С.}"}
       { curlanguage "german" =
          {"S."} %%%% { "s." }
          {"language is not defined: " language  "pages" * * warning$ "p."}
