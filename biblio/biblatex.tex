@@ -68,7 +68,7 @@ sorting=none,% настройка сортировки списка литера
 \addbibresource[label=bl-external]{biblio/external.bib}
 \addbibresource[label=bl-author]{biblio/author.bib}
 \addbibresource[label=bl-author]{biblio/library.bib}
-\addbibresource[label=bl-author]{biblio/zotero.bib}
+% \addbibresource[label=bl-author]{biblio/zotero.bib}
 
 
 
@@ -278,10 +278,10 @@ sorting=none,% настройка сортировки списка литера
 %\DeclareFieldFormat{title}{\usebibmacro{string+doi}{#1}} % ссылка на doi с названия работы
 %\DeclareFieldFormat{journaltitle}{\usebibmacro{string+doi}{#1}} % ссылка на doi с названия журнала
 %%% Тире как разделитель в библиографии традиционной руской длины:
-\renewcommand*{\newblockpunct}{\addperiod\addnbspace\cyrdash\space\bibsentence}
-%%% Убрать тире из разделителей элементов в библиографии:
-%\renewcommand*{\newblockpunct}{%
-%    \addperiod\space\bibsentence}%block punct.,\bibsentence is for vol,etc.
+% \renewcommand*{\newblockpunct}{\addperiod\addnbspace\cyrdash\space\bibsentence}
+%%% 2024!Убрать тире из разделителей элементов в библиографии:
+\renewcommand*{\newblockpunct}{%
+   \addperiod\space\bibsentence}%block punct.,\bibsentence is for vol,etc.
 
 %%% Возвращаем запись «Режим доступа» %%%
 %\DefineBibliographyStrings{english}{%
