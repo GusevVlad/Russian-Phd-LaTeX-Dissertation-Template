@@ -36,27 +36,26 @@
 \listfiles
 
 \begin{document}
-
+\input{common/renames} 
 \input{Synopsis/title}        % Титульный лист
 %\mainmatter                   % В том числе начинает нумерацию страниц арабскими цифрами с единицы
 \mainmatter*                  % Нумерация страниц не изменится, но начнётся с новой страницы
 \input{Synopsis/content}      % Содержание автореферата
-
 \appendix
-
-\section*{Публикации автора по теме диссертации}
 \begin{refsection}   
+    \phantom{
 \cite{nevinicaToplivnyyCiklLegkovodnogo2019,
     2024smirnovObogashchenieRegenerirovannogoUrana2018,
-    smirnovApplyingEnrichmentCapacities2018,
+    % smirnovApplyingEnrichmentCapacities2018,
     vantrodionova2019,
-    smirnovMethodEnrichReprocessed2019,
+    % smirnovMethodEnrichReprocessed2019,
     smirnovFizikotehnicheskieProblemyObogashcheniya2020,
-    gusevMultycascadeEnrichmentSchemes2020,
-    smirnovAnalysisEffectRestrictions2021,
-    2024gusevProblemsReusingReprocessed2022}
-\printbibliography[heading=subbibliography]
+    % gusevMultycascadeEnrichmentSchemes2020,
+    smirnovAnalysisEffectRestrictions2021}}
+\printbibliography[heading=subbibliography, title=\bibtitleauthor]
 \end{refsection}
+
+
 % \printbibliography[section=0, env=countexternal, keyword=biblioexternal, resetnumbers=true]
 
 %%% Выходные сведения типографии
