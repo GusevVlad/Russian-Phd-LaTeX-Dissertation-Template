@@ -1,0 +1,27 @@
+\begin{tikzpicture}[,
+scale=0.55]
+\begin{axis}[
+  xlabel style = {{at={(axis description cs:.86,0)}}},
+  ylabel = {$\delta(\frac{F_{NU}}{P}), \%$},
+  ylabel style = {{at={(axis description cs:-0.1,.925)},rotate=270,anchor=south}},
+  xlabel = {$\alpha$},
+  width=12cm, height=12cm, line width=2pt
+]
+
+\addplot+[
+  mark = {none}
+] coordinates {
+  (0.0, 62.75588591999848)
+  (0.1, 57.46871189031246)
+  (0.2, 52.181537750699725)
+  (0.3, 46.89436347836211)
+  (0.4, 41.60718904145653)
+  (0.5, 36.32001439328921)
+  (0.6, 31.032839460575456)
+  (0.7, 25.745664116420752)
+  (0.8, 20.458488104013128)
+  (0.9, 15.171962188478682)
+};
+
+\end{axis}
+\end{tikzpicture}

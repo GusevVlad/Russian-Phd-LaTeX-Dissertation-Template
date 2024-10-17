@@ -1,0 +1,25 @@
+\begin{tikzpicture}[,
+scale=0.55]
+\begin{axis}[
+  xlabel style = {{at={(axis description cs:.86,0)}}},
+  ylabel = {$\frac{F_{NU}}{P}, \text{кг}$},
+  ylabel style = {{at={(axis description cs:-0.08,.925)},rotate=270,anchor=south}},
+  xlabel = {$\alpha$},
+  width=12cm, height=12cm, line width=2pt
+]
+
+\addplot+ coordinates {
+  (0.0, 1.451136981370064)
+  (0.1, 2.0900206902270897)
+  (0.2, 2.7271976539076004)
+  (0.3, 3.3677100767332755)
+  (0.4, 4.0066695828264915)
+  (0.5, 4.684605170960345)
+  (0.6, 5.284133917225586)
+  (0.7, 5.923006199123587)
+  (0.8, 6.1718432023576035)
+  (0.9, 6.2778358250332955)
+};
+
+\end{axis}
+\end{tikzpicture}

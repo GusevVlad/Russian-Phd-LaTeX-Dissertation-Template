@@ -1,0 +1,27 @@
+\begin{tikzpicture}[,
+scale=0.55]
+\begin{axis}[
+  xlabel style = {{at={(axis description cs:.86,0)}}},
+  ylabel = {$\frac{\sum L}{P}$},
+  ylabel style = {{at={(axis description cs:-0.08,.925)},rotate=270,anchor=south}},
+  xlabel = {$\alpha$},
+  width=12cm, height=12cm, line width=2pt
+]
+
+\addplot+[
+  mark = {none}
+] coordinates {
+  (0.0, 6259.362460929076)
+  (0.1, 5933.462549529462)
+  (0.2, 5607.5626312821505)
+  (0.3, 5281.662704764506)
+  (0.4, 4955.762767988948)
+  (0.5, 4629.862818040192)
+  (0.6, 4303.962850341366)
+  (0.7, 3978.0628569647915)
+  (0.8, 3652.1628218594205)
+  (0.9, 3320.1004264033695)
+};
+
+\end{axis}
+\end{tikzpicture}

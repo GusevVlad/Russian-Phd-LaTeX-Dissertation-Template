@@ -5,7 +5,7 @@
 \end{center}
 %
 \vspace{0pt plus4fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
-\IfFileExists{images/logo.png}{
+\IfFileExists{images/no_logo.png}{
   \begin{minipage}[b]{0.5\linewidth}
     \begin{flushleft}
       \includegraphics[height=4.5cm]{logo}
@@ -38,9 +38,7 @@
 
 \vspace{0pt plus2fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 {%\small
-Специальность \thesisSpecialtyNumber\ "---
-
-<<\thesisSpecialtyTitle>>
+\thesisSpecialtyNumber\ "---<<\thesisSpecialtyTitle>>
 }
 
 \ifdefined\thesisSpecialtyTwoNumber
@@ -99,7 +97,7 @@
 \fi
 % \fi
 
-Консультанты:
+Консультант:
 
 \consultOneRegalia
 
@@ -110,13 +108,13 @@
 \fi
 \par
 % \vspace{0.013\paperheight}
-\consultTwoRegalia
+% \consultTwoRegalia
 
-\ifdefined\consultTwoDead
-\framebox{\consultTwoFio}
-\else
-\consultTwoFio
-\fi
+% \ifdefined\consultTwoDead
+% \framebox{\consultTwoFio}
+% \else
+% \consultTwoFio
+% \fi
 \fi
 % \vspace{0.013\paperheight}\\
 

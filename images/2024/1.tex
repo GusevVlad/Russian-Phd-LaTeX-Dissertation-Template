@@ -1,0 +1,22 @@
+\begin{tikzpicture}[,
+    scale=0.55]
+    
+    
+    \begin{axis}[
+      xlabel style = {{at={(axis description cs:.86,0)}}},
+      ylabel = {$\delta(\frac{\Delta A}{P}), \%$},
+      ylabel style = {{at={(axis description cs:-0.13,.925)},rotate=270,anchor=south}},
+      xlabel = {$\alpha$},
+      width=12cm, height=12cm, line width=2pt
+    ]
+    
+    \addplot+[
+      mark = {none}
+    ] coordinates {
+      (0.0, 119.84918999027512)
+      (0.4, 74.06252427897367)
+      (0.8, 28.275849674837332)
+    };
+    
+    \end{axis}
+    \end{tikzpicture}
